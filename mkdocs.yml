@@ -1,0 +1,100 @@
+site_name: "電験3種 電力Wiki"
+site_description: "電験3種 電力 — 設備×公式×過去問クロスリファレンス"
+site_url: "https://kfurufuru.github.io/denken-wiki-denryoku/"
+repo_url: "https://github.com/kfurufuru/denken-wiki-denryoku"
+repo_name: "denken-wiki-denryoku"
+copyright: "&copy; 2026 Furutachi — 個人学習用"
+
+theme:
+  name: material
+  custom_dir: overrides
+  language: ja
+  palette:
+    - scheme: default
+      primary: deep orange
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: ダークモードに切り替え
+    - scheme: slate
+      primary: deep orange
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: ライトモードに切り替え
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.copy
+    - announce.dismiss
+
+plugins:
+  - search:
+      lang: ja
+  - tags
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - attr_list
+  - md_in_html
+  - def_list
+  - footnotes
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - toc:
+      permalink: true
+  - abbr
+  - pymdownx.mark
+  - pymdownx.snippets:
+      auto_append:
+        - includes/abbreviations.md
+
+extra_css:
+  - stylesheets/custom.css
+
+nav:
+  - Home: index.md
+  - テーマ別:
+    - themes/index.md
+    - 発電:
+      - 水力発電: themes/suiryoku.md
+      - 火力発電: themes/karyoku.md
+      - 原子力発電: themes/genshiryoku.md
+      - 新エネルギー発電: themes/shin-energy.md
+    - 変電:
+      - 変圧器: themes/henatsuki.md
+      - 開閉装置・保護継電器: themes/kaihei-hogo.md
+    - 送電:
+      - 架空送電線路: themes/kakuu-souden.md
+      - 地中送電・電力ケーブル: themes/chichuu-souden.md
+    - 配電:
+      - 配電線路: themes/haiden.md
+    - その他:
+      - 電気材料: themes/denki-zairyou.md
+      - 電力系統・需給運用: themes/denryoku-keitou.md
+  - 過去問マッピング:
+    - kakomon/index.md
+    - 年度別一覧: kakomon/by-year.md
+    - 分野別一覧: kakomon/by-field.md
+  - リファレンス:
+    - reference/index.md
+    - 頻出計算パターン集: reference/calc-patterns.md
+    - 頻出数値暗記シート: reference/numbers.md
+    - 用語集: reference/glossary.md
+    - 絵文字マーカー凡例: reference/emoji-legend.md
+    - バージョニング基準: reference/versioning.md
