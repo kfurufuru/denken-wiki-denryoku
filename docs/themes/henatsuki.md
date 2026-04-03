@@ -1,7 +1,7 @@
 ---
 tags: [変電, 変圧器, 高頻度]
 difficulty: ★★★
-version: v0.5
+version: v0.7
 related_themes: [架空送電線路, 開閉装置・保護継電器]
 ---
 

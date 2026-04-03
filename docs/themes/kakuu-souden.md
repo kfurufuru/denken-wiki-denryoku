@@ -1,7 +1,7 @@
 ---
 tags: [送電, 架空送電, 高頻度]
 difficulty: ★★★
-version: v0.5
+version: v0.7
 related_themes: [地中送電・電力ケーブル, 配電線路, 変圧器]
 ---
 

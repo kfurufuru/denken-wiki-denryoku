@@ -1,7 +1,7 @@
 ---
 tags: [配電, 高頻度]
 difficulty: ★★★
-version: v0.5
+version: v0.7
 related_themes: [架空送電線路, 変圧器]
 ---
 
