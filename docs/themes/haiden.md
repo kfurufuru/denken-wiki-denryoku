@@ -243,5 +243,5 @@ $$\Delta V_{改善後} = \Delta V_{改善前} \times \frac{\cos\phi_2}{\cos\phi_
 
 ## 関連テーマ
 
-- [架空送電線路](./kakou-souden.md) — 送電線路の電圧降下公式（配電と共通の基礎）
-- [変圧器](./hensoki.md) — 柱上変圧器の原理・効率計算
+- [架空送電線路](./kakuu-souden.md) — 送電線路の電圧降下公式（配電と共通の基礎）
+- [変圧器](./henatsuki.md) — 柱上変圧器の原理・効率計算
