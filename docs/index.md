@@ -15,6 +15,46 @@
 
 ---
 
+## 🔌 設備系統で探す
+
+<div class="grid cards" markdown>
+
+- ⚡ **[発電](themes/index.md#発電)**
+
+    ---
+
+    水力・火力・原子力・新エネルギー。出力計算・熱効率が頻出。
+
+    代表テーマ: [水力発電](themes/suiryoku.md) / [火力発電](themes/karyoku.md)
+
+- 🔄 **[変電](themes/index.md#変電)**
+
+    ---
+
+    変圧器・調相設備・保護継電器。損失計算・効率が頻出。
+
+    代表テーマ: [変圧器](themes/henatsuki.md) / [保護継電器](themes/hogo-kiden.md)
+
+- 🗼 **[送電](themes/index.md#送電)**
+
+    ---
+
+    架空線・地中ケーブル・電圧降下。線路定数・安定度計算が頻出。
+
+    代表テーマ: [架空送電線路](themes/kakuu-souden.md) / [地中電線路](themes/chichuu-souden.md)
+
+- 🔌 **[配電](themes/index.md#配電)**
+
+    ---
+
+    配電方式・電圧降下・力率改善。出題数 **No.1 85問**。最優先。
+
+    代表テーマ: [配電線路](themes/haiden.md) / [需要・負荷](themes/juyoku.md)
+
+</div>
+
+---
+
 ## 📊 出題頻度 TOP5 テーマ
 
 | 順位 | テーマ | 出題数(22年分) | 優先度 |

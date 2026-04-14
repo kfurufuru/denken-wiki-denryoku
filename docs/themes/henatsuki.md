@@ -283,3 +283,12 @@ $$\eta_{day} = \frac{\sum P_{out} \cdot t}{\sum P_{out} \cdot t + P_i \cdot 24h 
 | H26 | 問6 | 配電用変電所の容量 | 計算 | ★★★★☆ |
 
 > 詳細解説: [電験王 変電カテゴリ](https://denken-ou.com/denryoku/?cat=henden)
+
+---
+
+## 関連テーマ
+
+- [架空送電線路](kakuu-souden.md)（送電電圧と変圧の関係）
+- [配電](haiden.md)（配電変圧器）
+- [開閉装置・保護継電器](kaihei-hogo.md)（変圧器保護リレー）
+- [電力系統・需給運用](denryoku-keitou.md)（系統内の変圧器）

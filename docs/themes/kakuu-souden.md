@@ -315,3 +315,12 @@ Y結線: 線電流 = 相電流（$I_L = I_P$）
 | H25 | 問8 | 架空送電線路の構成要素 | 論説 | ★★★★☆ |
 
 > 詳細解説: [電験王 送電カテゴリ](https://denken-ou.com/denryoku/?cat=souden)
+
+---
+
+## 関連テーマ
+
+- [地中送電](chichuu-souden.md)（架空vs地中の比較）
+- [開閉装置・保護継電器](kaihei-hogo.md)（送電線保護）
+- [電気材料](denki-zairyou.md)（電線材料）
+- [変圧器](henatsuki.md)（変電設備との接続）
