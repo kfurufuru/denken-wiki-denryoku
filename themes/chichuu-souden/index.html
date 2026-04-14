@@ -1,0 +1,2530 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="電験3種 電力 — 設備×公式×過去問クロスリファレンス">
+      
+      
+      
+        <link rel="canonical" href="https://kfurufuru.github.io/denken-wiki-denryoku/themes/chichuu-souden/">
+      
+      
+        <link rel="prev" href="../kakuu-souden/">
+      
+      
+        <link rel="next" href="../haiden/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>地中送電・電力ケーブル - 電験3種 電力Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+              <button class="md-banner__button md-icon" aria-label="非表示にします">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+              </button>
+            
+            
+  <div style="display:flex; gap:8px; align-items:center; justify-content:center; flex-wrap:wrap; padding:2px 0;">
+    <a href="https://kfurufuru.github.io/secretary-portal/" style="font-weight:600; color:#fff; text-decoration:none; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.2); border-radius:4px; padding:2px 10px; font-size:0.82rem;" onmouseover="this.style.background='rgba(255,255,255,0.2)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'">← ポータル</a>
+    <span style="color:rgba(255,255,255,0.3);">|</span>
+    <span style="font-size:0.78rem; color:rgba(255,255,255,0.6); margin-right:4px;">電験3種 :</span>
+    <a href="https://kfurufuru.github.io/denken-wiki/"
+       style="font-weight:600; color:#fff; text-decoration:none; background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.35); border-radius:4px; padding:2px 10px; font-size:0.82rem;"
+       onmouseover="this.style.background='rgba(255,255,255,0.22)'" onmouseout="this.style.background='rgba(255,255,255,0.12)'">
+      📗 法規Wiki
+    </a>
+    <a href="https://kfurufuru.github.io/denken-wiki-riron/"
+       style="font-weight:600; color:#fff; text-decoration:none; background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.35); border-radius:4px; padding:2px 10px; font-size:0.82rem;"
+       onmouseover="this.style.background='rgba(255,255,255,0.22)'" onmouseout="this.style.background='rgba(255,255,255,0.12)'">
+      📘 理論Wiki
+    </a>
+    <span style="font-weight:700; color:#fff; background:rgba(255,255,255,0.25); border-radius:4px; padding:2px 10px; font-size:0.82rem;">
+      ⚡ 電力Wiki
+    </span>
+    <span style="color:rgba(255,255,255,0.4); margin:0 2px;">|</span>
+    <a href="https://kfurufuru.github.io/ei-wiki/"
+       style="font-weight:600; color:#fff; text-decoration:none; background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.35); border-radius:4px; padding:2px 10px; font-size:0.82rem;"
+       onmouseover="this.style.background='rgba(255,255,255,0.22)'" onmouseout="this.style.background='rgba(255,255,255,0.12)'">
+      🔧 電気計装Wiki
+    </a>
+  </div>
+
+          </div>
+          
+            <script>var el=document.querySelector("[data-md-component=announce]");if(el){var content=el.querySelector(".md-typeset");__md_hash(content.innerHTML)===__md_get("__announce")&&(el.hidden=!0)}</script>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+    <a href="../.." title="電験3種 電力Wiki" class="md-header__button md-logo" aria-label="電験3種 電力Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            電験3種 電力Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              地中送電・電力ケーブル
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="amber"  aria-label="ダークモードに切り替え"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="ダークモードに切り替え" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-orange" data-md-color-accent="amber"  aria-label="ライトモードに切り替え"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="ライトモードに切り替え" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="検索">
+        
+        <button type="reset" class="md-search__icon md-icon" title="クリア" aria-label="クリア" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            検索を初期化
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/kfurufuru/denken-wiki-denryoku" title="リポジトリへ" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    denken-wiki-denryoku
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="タブ" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  テーマ別
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../kakomon/" class="md-tabs__link">
+          
+  
+  
+  過去問マッピング
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../reference/" class="md-tabs__link">
+          
+  
+  
+  リファレンス
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="ナビゲーション" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="電験3種 電力Wiki" class="md-nav__button md-logo" aria-label="電験3種 電力Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    電験3種 電力Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/kfurufuru/denken-wiki-denryoku" title="リポジトリへ" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    denken-wiki-denryoku
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    テーマ別
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    テーマ別
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    テーマ一覧
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    発電
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    発電
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../suiryoku/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    水力発電
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../karyoku/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    火力発電
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../genshiryoku/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    原子力発電
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shin-energy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    新エネルギー発電
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    変電
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    変電
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../henatsuki/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    変圧器
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kaihei-hogo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    開閉装置・保護継電器
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    送電
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    送電
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kakuu-souden/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    架空送電線路
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    地中送電・電力ケーブル
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    地中送電・電力ケーブル
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 直感的理解
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 設備を歩く
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 設備を歩く">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CVケーブルの断面構造
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-vs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 架空送電 vs 地中送電 比較表（最重要）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. ケーブルの種類比較表
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 公式マップ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 公式マップ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        レイヤーA: 充電電流と誘電損
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="レイヤーA: 充電電流と誘電損">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        充電電流
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        誘電損
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        レイヤーB: 静電容量が大きい理由
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 解法パターン（充電電流の計算）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. 解法パターン（充電電流の計算）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-i_c-omega-cv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        パターン①: 充電電流 $I_c = \omega CV$
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-top3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 勘違いTOP3
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. 勘違いTOP3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-l-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        勘違い①: 「地中ケーブルは L が大きく C が小さい（架空線と同じ）」
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        勘違い②: 「フェランチ効果は架空送電線の方が起きやすい」
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-cv-of" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        勘違い③: 「CVケーブルの最高使用温度は OFケーブルより低い」
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. 正誤判定の急所
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 出題実績
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    配電
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    配電
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../haiden/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    配電線路
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    その他
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    その他
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../denki-zairyou/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電気材料
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../denryoku-keitou/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    電力系統・需給運用
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    過去問マッピング
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    過去問マッピング
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kakomon/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    過去問マッピング
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kakomon/by-year/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    年度別一覧
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kakomon/by-field/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    分野別一覧
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    リファレンス
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    リファレンス
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    リファレンス
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/calc-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    頻出計算パターン集
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/numbers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    頻出数値暗記シート
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    用語集
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/emoji-legend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    絵文字マーカー凡例
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../reference/versioning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    バージョニング基準
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 直感的理解
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 設備を歩く
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 設備を歩く">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CVケーブルの断面構造
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-vs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 架空送電 vs 地中送電 比較表（最重要）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. ケーブルの種類比較表
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 公式マップ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 公式マップ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        レイヤーA: 充電電流と誘電損
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="レイヤーA: 充電電流と誘電損">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        充電電流
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        誘電損
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        レイヤーB: 静電容量が大きい理由
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 解法パターン（充電電流の計算）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. 解法パターン（充電電流の計算）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-i_c-omega-cv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        パターン①: 充電電流 $I_c = \omega CV$
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-top3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 勘違いTOP3
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. 勘違いTOP3">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-l-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        勘違い①: 「地中ケーブルは L が大きく C が小さい（架空線と同じ）」
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        勘違い②: 「フェランチ効果は架空送電線の方が起きやすい」
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-cv-of" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        勘違い③: 「CVケーブルの最高使用温度は OFケーブルより低い」
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. 正誤判定の急所
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 出題実績
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+      
+        <span class="md-tag">地中送電</span>
+      
+    
+      
+      
+      
+      
+        <span class="md-tag">送電</span>
+      
+    
+  </nav>
+
+
+  
+  
+
+
+<h1 id="_1">地中送電・電力ケーブル<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">📋 v0.7 — 過去問データ充填済み</p>
+<p>出題実績（R01〜R07）を充填済み。公式・数値は参考書で必ず確認してください。</p>
+</div>
+<h2 id="1">1. 直感的理解<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<p><strong>地中送電の本質</strong>: 架空送電線を地中に埋めたもの。都市部・海底・景観保護が必要な地域で使用される。架空送電線より安全性・信頼性が高い反面、建設費が高い・放熱が困難・充電電流が大きいという課題がある。</p>
+<div class="highlight"><pre><span></span><code>架空送電線: 空気中を電線が通る → 放熱は空気に頼る
+地中ケーブル: 土中に埋設    → 放熱は土に頼る（放熱困難）
+</code></pre></div>
+<blockquote>
+<p><strong>5秒で思い出す</strong></p>
+<p><strong>地中ケーブルの3大問題: コスト高・放熱難・充電電流大</strong></p>
+</blockquote>
+<div class="admonition tip">
+<p class="admonition-title">覚え方</p>
+<p>「地中は3大問題持ち」→ <strong>コ</strong>スト・<strong>放</strong>熱・<strong>充</strong>電（コ・ホ・ジュウ）</p>
+</div>
+<hr />
+<h2 id="2">2. 設備を歩く<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<h3 id="cv">CVケーブルの断面構造<a class="headerlink" href="#cv" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>graph LR
+    A["① 導体（銅またはアルミ）"] --&gt; B["② 内部半導電層"]
+    B --&gt; C["③ 絶縁体（XLPE 架橋ポリエチレン）"]
+    C --&gt; D["④ 外部半導電層"]
+    D --&gt; E["⑤ 遮へい（銅テープ・銅線）"]
+    E --&gt; F["⑥ シース（ビニルまたはポリエチレン）"]</code></pre>
+<table>
+<thead>
+<tr>
+<th>層</th>
+<th>名称</th>
+<th>役割</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①</td>
+<td>導体</td>
+<td>電流を流す主体。銅またはアルミ</td>
+</tr>
+<tr>
+<td>②</td>
+<td>内部半導電層</td>
+<td>導体表面の電界を均一化（電界集中を防ぐ）</td>
+</tr>
+<tr>
+<td>③</td>
+<td>絶縁体（<abbr title="架橋ポリエチレン絶縁 (Cross-Linked Polyethylene)">XLPE</abbr>）</td>
+<td>電気絶縁の主体。架橋ポリエチレン</td>
+</tr>
+<tr>
+<td>④</td>
+<td>外部半導電層</td>
+<td>絶縁体外面の電界を均一化</td>
+</tr>
+<tr>
+<td>⑤</td>
+<td>遮へい</td>
+<td>漏れ電流・誘導電流を流す。接地する</td>
+</tr>
+<tr>
+<td>⑥</td>
+<td>シース</td>
+<td>機械的保護・防水</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>半導電層が上下にある理由</strong>: 電界が局所集中すると絶縁破壊につながる。半導電層で電界を滑らかに均一化する。</p>
+</blockquote>
+<hr />
+<h2 id="3-vs">3. 架空送電 vs 地中送電 比較表（最重要）<a class="headerlink" href="#3-vs" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>架空送電線</th>
+<th>地中ケーブル</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>建設費</td>
+<td>低い</td>
+<td>高い（5〜10倍以上）</td>
+</tr>
+<tr>
+<td>保守費</td>
+<td>中（定期点検・除草等）</td>
+<td>低い（埋設後は手がかからない）</td>
+</tr>
+<tr>
+<td>信頼性・事故頻度</td>
+<td>低（雷・風雪・塩害の影響大）</td>
+<td>高（外部環境の影響小）</td>
+</tr>
+<tr>
+<td>事故復旧時間</td>
+<td>短い（目視で発見しやすい）</td>
+<td>長い（掘削が必要）</td>
+</tr>
+<tr>
+<td>充電電流</td>
+<td>小さい</td>
+<td><strong>大きい</strong>（静電容量Cが大）</td>
+</tr>
+<tr>
+<td>インダクタンスL</td>
+<td>大きい</td>
+<td>小さい（導体間距離が小さい）</td>
+</tr>
+<tr>
+<td>静電容量C</td>
+<td>小さい</td>
+<td><strong>大きい</strong>（導体間距離が小さい）</td>
+</tr>
+<tr>
+<td>フェランチ効果の発生しやすさ</td>
+<td>比較的少ない</td>
+<td><strong>発生しやすい</strong>（Cが大のため）</td>
+</tr>
+<tr>
+<td>熱放散</td>
+<td>容易（空気冷却）</td>
+<td>困難（土壌依存）</td>
+</tr>
+<tr>
+<td>環境影響・景観</td>
+<td>鉄塔が目立つ・土地が使えない</td>
+<td>地中化で景観保護・土地は使える</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4">4. ケーブルの種類比較表<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>種類</th>
+<th>絶縁材料</th>
+<th>誘電正接 <abbr title="誘電正接 (Dielectric Loss Tangent)">tanδ</abbr></th>
+<th>最高使用温度</th>
+<th>特徴</th>
+<th>主な用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OFケーブル（油浸紙絶縁油入）</td>
+<td>浸油紙</td>
+<td>大きい（0.002〜0.004）</td>
+<td>75〜85℃</td>
+<td>油圧管理が必要・漏油リスク</td>
+<td>古い高圧・超高圧幹線</td>
+</tr>
+<tr>
+<td>CVケーブル（架橋ポリエチレン絶縁ビニルシース）</td>
+<td><abbr title="架橋ポリエチレン絶縁 (Cross-Linked Polyethylene)">XLPE</abbr></td>
+<td><strong>小さい</strong>（0.0003〜0.001）</td>
+<td><strong>90℃</strong></td>
+<td>軽量・油不要・現在の主流</td>
+<td>高圧・特別高圧幹線</td>
+</tr>
+<tr>
+<td>CVTケーブル</td>
+<td><abbr title="架橋ポリエチレン絶縁 (Cross-Linked Polyethylene)">XLPE</abbr>（単心3条）</td>
+<td>小さい</td>
+<td>90℃</td>
+<td>単心ケーブルを3本撚り合わせ</td>
+<td>中圧配電・大電流回路</td>
+</tr>
+</tbody>
+</table>
+<p><strong><abbr title="油浸紙絶縁 (Oil-Filled)">OF</abbr> vs CV の核心比較</strong>:</p>
+<ul>
+<li><strong>誘電正接 <abbr title="誘電正接 (Dielectric Loss Tangent)">tanδ</abbr></strong>: OFはCVより大きい → <strong>誘電損が多い</strong></li>
+<li><strong>最高使用温度</strong>: CV（90℃）&gt; <abbr title="油浸紙絶縁 (Oil-Filled)">OF</abbr>（75〜85℃）→ CVの方が許容電流が大きい</li>
+<li><strong>維持管理</strong>: OFは油圧管理システムが必要（油が漏れると絶縁破壊）。CVは不要</li>
+</ul>
+<hr />
+<h2 id="5">5. 公式マップ<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
+<h3 id="a">レイヤーA: 充電電流と誘電損<a class="headerlink" href="#a" title="Permanent link">&para;</a></h3>
+<h4 id="_2">充電電流<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<p>$$\boxed{I_c = \omega C V \quad [\text{A}]}$$</p>
+<ul>
+<li>$\omega = 2\pi f$（角周波数）</li>
+<li>$C$: ケーブルの静電容量 [F]</li>
+<li>$V$: 線間電圧（または相電圧に注意）[V]</li>
+</ul>
+<h4 id="_3">誘電損<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<p>$$\boxed{P_d = \omega C V^2 \tan\delta \quad [\text{W}]}$$</p>
+<ul>
+<li>$\tan\delta$: 誘電正接（絶縁材料の損失特性）</li>
+<li>OFより CVの方が $\tan\delta$ が小さい → 誘電損が少ない</li>
+</ul>
+<h3 id="b">レイヤーB: 静電容量が大きい理由<a class="headerlink" href="#b" title="Permanent link">&para;</a></h3>
+<p><strong>架空送電線</strong>: 導体間（または導体と大地間）の距離が大きい（数m〜数十m）→ C は小さい</p>
+<p><strong>地中ケーブル</strong>: 絶縁層が薄く、導体と遮へい層の距離が小さい（数mm〜数十mm）→ C は大きい</p>
+<p>$$C = \frac{2\pi\varepsilon}{\ln(D/d)} \quad [\text{F/m}]$$</p>
+<ul>
+<li>$D$: 外側導体（遮へい）径</li>
+<li>$d$: 内側導体径</li>
+<li>$D/d$ が小さい（距離が近い）ほど C が大きくなる</li>
+</ul>
+<hr />
+<h2 id="6">6. 解法パターン（充電電流の計算）<a class="headerlink" href="#6" title="Permanent link">&para;</a></h2>
+<h3 id="1-i_c-omega-cv">パターン①: 充電電流 $I_c = \omega CV$<a class="headerlink" href="#1-i_c-omega-cv" title="Permanent link">&para;</a></h3>
+<p><strong>見分け方</strong>: 「地中ケーブル」「静電容量 ○ μF/km」「充電電流」のキーワードが揃っている</p>
+<p><strong>手順</strong>:</p>
+<div class="highlight"><pre><span></span><code>Step 1: ω = 2πf を計算（f = 50Hz なら ω = 2π × 50 = 314 rad/s）
+Step 2: Ic = ωCV に代入
+Step 3: 単位確認（C の単位が μF/km なら線路長を掛けて F に換算してから計算）
+</code></pre></div>
+<p><strong>例題</strong>: 地中ケーブル（線路長 10km、静電容量 0.2μF/km、66kV系統、f = 50Hz）の充電電流は？</p>
+<p>$$C_{total} = 0.2 \times 10^{-6} \times 10 = 2 \times 10^{-6} \text{ F}$$</p>
+<p>$$\omega = 2\pi \times 50 = 314 \text{ rad/s}$$</p>
+<p>三相では相電圧 $V = 66{,}000 / \sqrt{3} = 38{,}105$ V を使う（相電圧×Cで各相の充電電流）</p>
+<p>$$I_c = 314 \times 2 \times 10^{-6} \times 38{,}105 \approx 23.9 \text{ A}$$</p>
+<hr />
+<h2 id="7-top3">7. 勘違いTOP3<a class="headerlink" href="#7-top3" title="Permanent link">&para;</a></h2>
+<h3 id="1-l-c">勘違い①: 「地中ケーブルは L が大きく C が小さい（架空線と同じ）」<a class="headerlink" href="#1-l-c" title="Permanent link">&para;</a></h3>
+<p><strong>誤り。</strong> 地中ケーブルは架空送電線と<strong>逆</strong>。</p>
+<ul>
+<li>L（インダクタンス）: <strong>小さい</strong>（導体間距離が小さいため磁束が少ない）</li>
+<li>C（静電容量）: <strong>大きい</strong>（導体間距離が小さいため静電容量が大きい）</li>
+</ul>
+<h3 id="2_1">勘違い②: 「フェランチ効果は架空送電線の方が起きやすい」<a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h3>
+<p><strong>誤り。</strong> 静電容量 C が大きい地中ケーブルの方が<strong>充電電流が大きく、フェランチ効果が発生しやすい</strong>。</p>
+<p>フェランチ効果の発生条件: 軽負荷または無負荷 + 静電容量が大きい（＝充電電流が大きい）</p>
+<h3 id="3-cv-of">勘違い③: 「CVケーブルの最高使用温度は OFケーブルより低い」<a class="headerlink" href="#3-cv-of" title="Permanent link">&para;</a></h3>
+<p><strong>誤り。</strong> CVケーブル（XLPE絶縁）の最高使用温度は <strong>90℃</strong>。OFケーブル（浸油紙絶縁）の 75〜85℃ より<strong>高い</strong>。だから CVケーブルの方が許容電流が大きく取れる。</p>
+<hr />
+<h2 id="8">8. 正誤判定の急所<a class="headerlink" href="#8" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>文</th>
+<th>判定</th>
+<th>解説</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>地中ケーブルは架空送電線より静電容量が小さい</td>
+<td><strong>誤</strong></td>
+<td>地中ケーブルは導体間距離が小さいため C が<strong>大きい</strong></td>
+</tr>
+<tr>
+<td>CVケーブルはOFケーブルより誘電正接が小さく誘電損が少ない</td>
+<td><strong>正</strong></td>
+<td>XLPEは浸油紙より <abbr title="誘電正接 (Dielectric Loss Tangent)">tanδ</abbr> が小さい</td>
+</tr>
+<tr>
+<td>地中ケーブルの事故復旧は架空送電線より短時間で済む</td>
+<td><strong>誤</strong></td>
+<td>掘削が必要なため<strong>時間がかかる</strong></td>
+</tr>
+<tr>
+<td>フェランチ効果は地中ケーブルで発生しやすい</td>
+<td><strong>正</strong></td>
+<td>静電容量Cが大きく充電電流が多いため</td>
+</tr>
+<tr>
+<td>CVケーブルの最高使用温度はOFケーブルより高い</td>
+<td><strong>正</strong></td>
+<td>CV = 90℃、<abbr title="油浸紙絶縁 (Oil-Filled)">OF</abbr> = 75〜85℃</td>
+</tr>
+<tr>
+<td>地中ケーブルはインダクタンスが架空送電線より大きい</td>
+<td><strong>誤</strong></td>
+<td>導体間距離が小さいため L は<strong>小さい</strong></td>
+</tr>
+<tr>
+<td>地中送電は雷害や風雪の影響を受けにくく信頼性が高い</td>
+<td><strong>正</strong></td>
+<td>地中に埋設されているため外部環境の影響を受けにくい</td>
+</tr>
+<tr>
+<td>充電電流は静電容量と周波数に比例する</td>
+<td><strong>正</strong></td>
+<td>$I_c = \omega CV = 2\pi f C V$（fとCの両方に比例）</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="_4">📊 出題実績<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>年度</th>
+<th>問</th>
+<th>タイトル</th>
+<th>問題タイプ</th>
+<th>難易度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R07下</td>
+<td>問9</td>
+<td>地中送電線路の特徴と機材</td>
+<td>論説</td>
+<td>★★★☆☆</td>
+</tr>
+<tr>
+<td>R07上</td>
+<td>問9</td>
+<td>CVケーブルとOFケーブルの特徴比較</td>
+<td>穴埋</td>
+<td>★★★☆☆</td>
+</tr>
+<tr>
+<td>R06下</td>
+<td>問9</td>
+<td>地中ケーブルの誘電損・静電容量</td>
+<td>計算</td>
+<td>★★★★☆</td>
+</tr>
+<tr>
+<td>R06上</td>
+<td>問9</td>
+<td>地中送電線の充電電流計算</td>
+<td>計算</td>
+<td>★★★☆☆</td>
+</tr>
+<tr>
+<td>R05下</td>
+<td>問9</td>
+<td>架空送電線と地中ケーブルの特性比較</td>
+<td>論説</td>
+<td>★★★☆☆</td>
+</tr>
+<tr>
+<td>R05上</td>
+<td>問9</td>
+<td>CVケーブルとOFケーブルの特性比較（誘電損・最高使用温度）</td>
+<td>穴埋</td>
+<td>★★★☆☆</td>
+</tr>
+<tr>
+<td>R04下</td>
+<td>問9</td>
+<td>地中ケーブルの充電電流計算（静電容量・線路長・電圧）</td>
+<td>計算</td>
+<td>★★★★☆</td>
+</tr>
+<tr>
+<td>R03</td>
+<td>問9</td>
+<td>架空送電線と地中ケーブルの特性比較（L・C・フェランチ効果）</td>
+<td>穴埋</td>
+<td>★★★☆☆</td>
+</tr>
+<tr>
+<td>R02</td>
+<td>問9</td>
+<td>CVケーブルの構造（各層の名称と役割）</td>
+<td>論説</td>
+<td>★★☆☆☆</td>
+</tr>
+<tr>
+<td>R01</td>
+<td>問8</td>
+<td>地中送電の特徴（建設費・保守・事故復旧・充電電流の比較）</td>
+<td>論説</td>
+<td>★★☆☆☆</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>出題傾向まとめ</strong>: 架空送電線との比較（L大小・C大小・フェランチ効果）が頻出。CVケーブルとOFケーブルの <abbr title="誘電正接 (Dielectric Loss Tangent)">tanδ</abbr>・最高温度の比較も定番。充電電流の計算 $I_c = \omega CV$ は数値計算として出題されることがある。フェランチ効果の発生しやすさは地中&gt;架空の理由まで説明できるようにすること。</p>
+<p>詳細解説: <a href="https://denken-ou.com/denryoku/?cat=chichusouden">電験王 地中送電カテゴリ</a></p>
+</blockquote>
+<!-- 略語ツールチップ定義 — 電験3種 電力Wiki -->
+<!-- pymdownx.snippets の auto_append で全ページに自動適用 -->
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  ページトップへ戻る
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2026 Furutachi — 個人学習用
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.copy", "announce.dismiss"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version": "\u30d0\u30fc\u30b8\u30e7\u30f3\u5207\u308a\u66ff\u3048"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
