@@ -1,0 +1,6 @@
+draft_id,target_path,atoms_used,status,last_updated
+D01,docs/themes/suiryoku.md,"A0001,A0002,A0005,A0006,A0007,A0008,A0009,A0010,A0012,A0013,A0014,A0015,A0016,A0017,A0018,A0019,A0020,A0021,A0022,A0023,A0024,A0025",done,2026-04-03
+D02,docs/themes/karyoku.md,"A0003,A0004,A0011,A0026,A0027,A0028,A0029,A0030",writing,2026-04-15
+D03,docs/themes/haiden.md,,pending,
+D04,docs/themes/kakuu-souden.md,,pending,
+D05,docs/themes/henatsuki.md,,pending,
