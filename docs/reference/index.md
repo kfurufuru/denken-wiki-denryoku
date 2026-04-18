@@ -9,3 +9,8 @@
 | [用語集](glossary.md) | 電力科目の重要用語 |
 | [絵文字マーカー凡例](emoji-legend.md) | このWikiで使う絵文字の意味 |
 | [バージョニング基準](versioning.md) | 記事の品質バッジの意味 |
+
+## 攻略戦略との連携
+
+- 数値を確認したら → [直前3日チェックリスト](../strategy/last-3days-checklist.md)で即時確認
+- 計算テンプレートの使い方 → [B問題得点戦略](../strategy/b-mondai-strategy.md)
