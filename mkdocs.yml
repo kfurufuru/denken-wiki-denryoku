@@ -91,6 +91,7 @@ nav:
     - kakomon/index.md
     - 年度別一覧: kakomon/by-year.md
     - 分野別一覧: kakomon/by-field.md
+    - 出題波予測（周期性分析）: kakomon/wave-analysis.md
   - 攻略戦略:
     - strategy/index.md
     - 試験直前3日チェックリスト: strategy/last-3days-checklist.md
