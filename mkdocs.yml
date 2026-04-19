@@ -72,19 +72,24 @@ nav:
   - テーマ別:
     - themes/index.md
     - 発電:
+      - themes/hatsuden/index.md
       - 水力発電: themes/suiryoku.md
       - 火力発電: themes/karyoku.md
       - 原子力発電: themes/genshiryoku.md
       - 新エネルギー発電: themes/shin-energy.md
     - 変電:
+      - themes/henden/index.md
       - 変圧器: themes/henatsuki.md
       - 開閉装置・保護継電器: themes/kaihei-hogo.md
     - 送電:
+      - themes/souden/index.md
       - 架空送電線路: themes/kakuu-souden.md
       - 地中送電・電力ケーブル: themes/chichuu-souden.md
     - 配電:
+      - themes/haiden-group/index.md
       - 配電線路: themes/haiden.md
     - その他:
+      - themes/sonota/index.md
       - 電気材料: themes/denki-zairyou.md
       - 電力系統・需給運用: themes/denryoku-keitou.md
   - 過去問マッピング:
