@@ -79,44 +79,49 @@ $$\eta_{day} = \frac{\displaystyle \sum_k P_{out,k}\,t_k}{\displaystyle \sum_k P
 
 #### ビジュアル：1 日の損失構成
 
-<div><svg viewBox="0 0 820 320" xmlns="http://www.w3.org/2000/svg" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-label="1日の出力と損失の時間別階段グラフ">
+<div><svg viewBox="0 0 880 380" xmlns="http://www.w3.org/2000/svg" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-label="1日の出力と損失の時間別階段グラフ">
 <defs>
 <filter id="shLoss" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity="0.15"/></filter>
 <linearGradient id="gLoad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bbdefb"/><stop offset="100%" stop-color="#64b5f6"/></linearGradient>
 <linearGradient id="gCu" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#a5d6a7"/><stop offset="100%" stop-color="#66bb6a"/></linearGradient>
 </defs>
-<text x="410" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#212121">1 日の出力と損失（鉄損は 24h 一定・銅損は負荷率² で振れる）</text>
-<text x="410" y="40" text-anchor="middle" font-size="10" fill="#666">100 kVA 変圧器・力率 1.0・$P_i$=500 W・$P_{c,full}$=1500 W</text>
-<line x1="80" y1="280" x2="780" y2="280" stroke="#424242" stroke-width="1.5"/>
-<line x1="80" y1="60" x2="80" y2="280" stroke="#424242" stroke-width="1.5"/>
-<text x="80" y="298" text-anchor="middle" font-size="10" fill="#424242">0h</text>
-<text x="313" y="298" text-anchor="middle" font-size="10" fill="#424242">8h</text>
-<text x="604" y="298" text-anchor="middle" font-size="10" fill="#424242">18h</text>
-<text x="780" y="298" text-anchor="middle" font-size="10" fill="#424242">24h</text>
-<text x="430" y="312" text-anchor="middle" font-size="11" font-weight="700" fill="#424242">時間 [h]</text>
-<text x="40" y="80" text-anchor="middle" font-size="10" fill="#1565c0">100 kW</text>
-<text x="40" y="172" text-anchor="middle" font-size="10" fill="#1565c0">60 kW</text>
-<text x="40" y="245" text-anchor="middle" font-size="10" fill="#1565c0">20 kW</text>
-<text x="40" y="280" text-anchor="middle" font-size="10" fill="#1565c0">0</text>
-<text x="22" y="170" text-anchor="middle" font-size="11" font-weight="700" fill="#1565c0" transform="rotate(-90 22 170)">出力 [kW]</text>
-<rect x="80" y="247" width="233" height="33" fill="url(#gLoad)" stroke="#1976d2" stroke-width="1.5" filter="url(#shLoss)"/>
-<text x="196" y="266" text-anchor="middle" font-size="11" font-weight="700" fill="#0d47a1">深夜 20 kW × 8h</text>
-<rect x="313" y="173" width="291" height="107" fill="url(#gLoad)" stroke="#1976d2" stroke-width="1.5" filter="url(#shLoss)"/>
-<text x="458" y="225" text-anchor="middle" font-size="11" font-weight="700" fill="#0d47a1">朝夕 60 kW × 10h</text>
-<rect x="604" y="80" width="176" height="200" fill="url(#gLoad)" stroke="#1976d2" stroke-width="1.5" filter="url(#shLoss)"/>
-<text x="692" y="180" text-anchor="middle" font-size="11" font-weight="700" fill="#0d47a1">昼間 100 kW × 6h</text>
-<line x1="80" y1="274" x2="780" y2="274" stroke="#d32f2f" stroke-width="2" stroke-dasharray="5,3"/>
-<text x="785" y="277" text-anchor="start" font-size="10" font-weight="700" fill="#d32f2f">鉄損 500 W（24h 一定）</text>
-<rect x="80" y="272" width="233" height="2" fill="#2e7d32"/>
-<text x="196" y="270" text-anchor="middle" font-size="9" font-weight="700" fill="#1b5e20">α²×1500 = 60 W</text>
-<rect x="313" y="266" width="291" height="8" fill="url(#gCu)" stroke="#2e7d32" stroke-width="1"/>
-<text x="458" y="262" text-anchor="middle" font-size="9" font-weight="700" fill="#1b5e20">α²×1500 = 540 W</text>
-<rect x="604" y="251" width="176" height="23" fill="url(#gCu)" stroke="#2e7d32" stroke-width="1.5"/>
-<text x="692" y="247" text-anchor="middle" font-size="9" font-weight="700" fill="#1b5e20">α²×1500 = 1500 W</text>
-<rect x="540" y="40" width="248" height="48" rx="6" fill="#fffde7" stroke="#f9a825" stroke-width="1.2"/>
-<text x="664" y="58" text-anchor="middle" font-size="10" font-weight="700" fill="#e65100">鉄損総量 = 500 × 24 = 12 kWh</text>
-<text x="664" y="72" text-anchor="middle" font-size="10" font-weight="700" fill="#1b5e20">銅損総量 = 60×8 + 540×10 + 1500×6 = 14.88 kWh</text>
-<text x="664" y="84" text-anchor="middle" font-size="10" font-weight="700" fill="#1565c0">出力電力量 = 1360 kWh → η_day ≈ 98.06%</text>
+<text x="440" y="24" text-anchor="middle" font-size="15" font-weight="700" fill="#212121">1日の出力と損失（鉄損は24h一定・銅損は負荷率²で振れる）</text>
+<text x="440" y="44" text-anchor="middle" font-size="11" fill="#666">定格容量 100 kV·A・力率 1.0・鉄損 Pᵢ=500 W・定格銅損 Pc,full=1500 W</text>
+<line x1="100" y1="320" x2="800" y2="320" stroke="#424242" stroke-width="1.5"/>
+<line x1="100" y1="80" x2="100" y2="320" stroke="#424242" stroke-width="1.5"/>
+<text x="100" y="340" text-anchor="middle" font-size="11" fill="#424242">0h</text>
+<text x="333" y="340" text-anchor="middle" font-size="11" fill="#424242">8h</text>
+<text x="624" y="340" text-anchor="middle" font-size="11" fill="#424242">18h</text>
+<text x="800" y="340" text-anchor="middle" font-size="11" fill="#424242">24h</text>
+<text x="450" y="358" text-anchor="middle" font-size="12" font-weight="700" fill="#424242">時間 [h]</text>
+<text x="62" y="103" text-anchor="end" font-size="11" fill="#1565c0">100</text>
+<text x="62" y="199" text-anchor="end" font-size="11" fill="#1565c0">60</text>
+<text x="62" y="276" text-anchor="end" font-size="11" fill="#1565c0">20</text>
+<text x="62" y="320" text-anchor="end" font-size="11" fill="#1565c0">0</text>
+<text x="36" y="200" text-anchor="middle" font-size="12" font-weight="700" fill="#1565c0" transform="rotate(-90 36 200)">出力 [kW]</text>
+<rect x="100" y="280" width="233" height="40" fill="url(#gLoad)" stroke="#1976d2" stroke-width="1.5" filter="url(#shLoss)"/>
+<text x="216" y="306" text-anchor="middle" font-size="12" font-weight="700" fill="#0d47a1">深夜 20 kW × 8h</text>
+<rect x="333" y="200" width="291" height="120" fill="url(#gLoad)" stroke="#1976d2" stroke-width="1.5" filter="url(#shLoss)"/>
+<text x="478" y="264" text-anchor="middle" font-size="12" font-weight="700" fill="#0d47a1">朝夕 60 kW × 10h</text>
+<rect x="624" y="100" width="176" height="220" fill="url(#gLoad)" stroke="#1976d2" stroke-width="1.5" filter="url(#shLoss)"/>
+<text x="712" y="210" text-anchor="middle" font-size="12" font-weight="700" fill="#0d47a1">昼間 100 kW × 6h</text>
+<line x1="100" y1="316" x2="800" y2="316" stroke="#d32f2f" stroke-width="2.2" stroke-dasharray="6,3"/>
+<text x="450" y="80" text-anchor="middle" font-size="11" font-weight="700" fill="#d32f2f">━━ 鉄損 Pᵢ=500W（負荷率に依らず 24h 一定）</text>
+<text x="450" y="376" text-anchor="middle" font-size="10" fill="#666">青の階段＝出力 / 赤の点線＝鉄損 / 緑＝銅損（時間帯別 60→540→1500 W）</text>
+<rect x="820" y="280" width="56" height="36" fill="url(#gCu)" stroke="#2e7d32" stroke-width="1"/>
+<text x="848" y="298" text-anchor="middle" font-size="9" font-weight="700" fill="#1b5e20">銅損</text>
+<text x="848" y="312" text-anchor="middle" font-size="9" font-weight="700" fill="#1b5e20">60W</text>
+<rect x="820" y="240" width="56" height="36" fill="url(#gCu)" stroke="#2e7d32" stroke-width="1"/>
+<text x="848" y="258" text-anchor="middle" font-size="9" font-weight="700" fill="#1b5e20">銅損</text>
+<text x="848" y="272" text-anchor="middle" font-size="9" font-weight="700" fill="#1b5e20">540W</text>
+<rect x="820" y="200" width="56" height="36" fill="url(#gCu)" stroke="#2e7d32" stroke-width="1"/>
+<text x="848" y="218" text-anchor="middle" font-size="9" font-weight="700" fill="#1b5e20">銅損</text>
+<text x="848" y="232" text-anchor="middle" font-size="9" font-weight="700" fill="#1b5e20">1500W</text>
+<rect x="100" y="100" width="280" height="78" rx="6" fill="#fffde7" stroke="#f9a825" stroke-width="1.2"/>
+<text x="240" y="120" text-anchor="middle" font-size="11" font-weight="700" fill="#e65100">▼ 1 日の損失総量（§2.3 計算例）</text>
+<text x="240" y="138" text-anchor="middle" font-size="10" fill="#bf360c">鉄損 = 500 × 24 = 12 kWh（24h 一定）</text>
+<text x="240" y="154" text-anchor="middle" font-size="10" fill="#1b5e20">銅損 = 60×8 + 540×10 + 1500×6 = 14.88 kWh</text>
+<text x="240" y="170" text-anchor="middle" font-size="10" fill="#1565c0">出力電力量 = 1360 kWh → η_day ≈ 98.06 %</text>
 </svg></div>
 
 **読み解き**：青の階段が **出力**（深夜→朝夕→昼間で 20→60→100 kW）、赤の点線が **鉄損 500 W（24h 一定）**、緑の薄い帯が **銅損 60→540→1500 W（負荷率²で大きく振れる）**。鉄損は「面積 = 一定値 × 24h」、銅損は「時間帯ごとに高さが負荷率²で変わる」面積積分になる。右上の黄色ボックスが §2.3 計算例の最終値。

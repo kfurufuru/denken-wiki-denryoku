@@ -126,51 +126,52 @@ $$R_2' = a^2 R_2, \quad X_2' = a^2 X_2$$
 
 二次側を一次側に換算した T 字型等価回路は次のようになる。励磁回路（$R_0, X_0$）は鉄損と励磁電流を担い、巻線抵抗・漏れリアクタンス（$R_1, X_1, R_2', X_2'$）は銅損と電圧変動率の根源。
 
-<div><svg viewBox="0 0 760 260" xmlns="http://www.w3.org/2000/svg" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-label="変圧器のT字型等価回路（一次側換算）">
+<div><svg viewBox="0 0 820 320" xmlns="http://www.w3.org/2000/svg" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-label="変圧器のT字型等価回路（一次側換算）">
 <defs>
 <filter id="shHen" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity="0.18"/></filter>
 <linearGradient id="gPrim" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bbdefb"/><stop offset="100%" stop-color="#90caf9"/></linearGradient>
 <linearGradient id="gSec" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffe0b2"/><stop offset="100%" stop-color="#ffcc80"/></linearGradient>
 <linearGradient id="gExc" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#c8e6c9"/><stop offset="100%" stop-color="#a5d6a7"/></linearGradient>
 </defs>
-<text x="380" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#212121">T 字型等価回路（一次側換算・単相）</text>
-<line x1="40" y1="80" x2="100" y2="80" stroke="#1565c0" stroke-width="2"/>
-<text x="40" y="72" text-anchor="start" font-size="11" font-weight="700" fill="#0d47a1">一次端子</text>
-<text x="35" y="100" text-anchor="start" font-size="11" fill="#0d47a1">V₁, I₁</text>
-<rect x="100" y="68" width="60" height="24" rx="3" fill="url(#gPrim)" stroke="#0d47a1" stroke-width="1.5" filter="url(#shHen)"/>
-<text x="130" y="84" text-anchor="middle" font-size="11" font-weight="700" fill="#0d47a1">R₁</text>
-<rect x="170" y="68" width="60" height="24" rx="3" fill="url(#gPrim)" stroke="#0d47a1" stroke-width="1.5" filter="url(#shHen)"/>
-<text x="200" y="84" text-anchor="middle" font-size="11" font-weight="700" fill="#0d47a1">X₁</text>
-<line x1="160" y1="80" x2="170" y2="80" stroke="#1565c0" stroke-width="2"/>
-<text x="135" y="58" text-anchor="middle" font-size="10" fill="#1565c0">一次巻線抵抗</text>
-<text x="200" y="58" text-anchor="middle" font-size="10" fill="#1565c0">一次漏れリアクタンス</text>
-<line x1="230" y1="80" x2="380" y2="80" stroke="#1565c0" stroke-width="2"/>
-<line x1="380" y1="80" x2="380" y2="160" stroke="#2e7d32" stroke-width="2"/>
-<rect x="350" y="100" width="60" height="24" rx="3" fill="url(#gExc)" stroke="#1b5e20" stroke-width="1.5" filter="url(#shHen)"/>
-<text x="380" y="116" text-anchor="middle" font-size="11" font-weight="700" fill="#1b5e20">R₀</text>
-<rect x="350" y="130" width="60" height="24" rx="3" fill="url(#gExc)" stroke="#1b5e20" stroke-width="1.5" filter="url(#shHen)"/>
-<text x="380" y="146" text-anchor="middle" font-size="11" font-weight="700" fill="#1b5e20">X₀</text>
-<text x="445" y="120" text-anchor="start" font-size="10" fill="#1b5e20">励磁回路</text>
-<text x="445" y="135" text-anchor="start" font-size="10" fill="#1b5e20">（鉄損 Pᵢ・</text>
-<text x="445" y="148" text-anchor="start" font-size="10" fill="#1b5e20">励磁電流 I₀）</text>
-<line x1="380" y1="160" x2="380" y2="180" stroke="#1565c0" stroke-width="2" stroke-dasharray="3,2"/>
-<line x1="380" y1="80" x2="490" y2="80" stroke="#e65100" stroke-width="2"/>
-<rect x="490" y="68" width="60" height="24" rx="3" fill="url(#gSec)" stroke="#e65100" stroke-width="1.5" filter="url(#shHen)"/>
-<text x="520" y="84" text-anchor="middle" font-size="11" font-weight="700" fill="#e65100">R₂&apos;</text>
-<rect x="560" y="68" width="60" height="24" rx="3" fill="url(#gSec)" stroke="#e65100" stroke-width="1.5" filter="url(#shHen)"/>
-<text x="590" y="84" text-anchor="middle" font-size="11" font-weight="700" fill="#e65100">X₂&apos;</text>
-<line x1="550" y1="80" x2="560" y2="80" stroke="#e65100" stroke-width="2"/>
-<text x="520" y="58" text-anchor="middle" font-size="10" fill="#e65100">二次換算抵抗</text>
-<text x="590" y="58" text-anchor="middle" font-size="10" fill="#e65100">二次換算リアクタンス</text>
-<line x1="620" y1="80" x2="700" y2="80" stroke="#e65100" stroke-width="2"/>
-<text x="710" y="72" text-anchor="start" font-size="11" font-weight="700" fill="#bf360c">負荷</text>
-<text x="710" y="92" text-anchor="start" font-size="11" fill="#bf360c">V₂&apos;, I₂&apos;</text>
-<line x1="40" y1="180" x2="700" y2="180" stroke="#616161" stroke-width="2"/>
-<text x="380" y="200" text-anchor="middle" font-size="11" font-weight="700" fill="#424242">中性線・接地側（共通帰路）</text>
-<text x="220" y="230" text-anchor="middle" font-size="10" fill="#0d47a1">青：一次側（換算前 R₁・X₁）</text>
-<text x="380" y="230" text-anchor="middle" font-size="10" fill="#1b5e20">緑：励磁（鉄損担当）</text>
-<text x="540" y="230" text-anchor="middle" font-size="10" fill="#e65100">橙：二次側（a² 倍換算）</text>
-<text x="380" y="248" text-anchor="middle" font-size="10" fill="#616161">銅損 = (R₁ + R₂&apos;) × I² ／ 鉄損 = V²/R₀</text>
+<text x="410" y="24" text-anchor="middle" font-size="15" font-weight="700" fill="#212121">T 字型等価回路（一次側換算・単相）</text>
+<text x="180" y="60" text-anchor="middle" font-size="11" font-weight="700" fill="#1565c0">一次側</text>
+<text x="180" y="76" text-anchor="middle" font-size="10" fill="#1565c0">巻線抵抗 R₁ ／ 漏れリアクタンス X₁</text>
+<text x="640" y="60" text-anchor="middle" font-size="11" font-weight="700" fill="#e65100">二次側（a² 倍換算）</text>
+<text x="640" y="76" text-anchor="middle" font-size="10" fill="#e65100">換算抵抗 R₂&apos; ／ 換算リアクタンス X₂&apos;</text>
+<line x1="40" y1="140" x2="100" y2="140" stroke="#1565c0" stroke-width="2"/>
+<text x="40" y="132" text-anchor="start" font-size="11" font-weight="700" fill="#0d47a1">一次端子</text>
+<text x="40" y="160" text-anchor="start" font-size="11" fill="#0d47a1">V₁, I₁</text>
+<rect x="100" y="128" width="70" height="24" rx="3" fill="url(#gPrim)" stroke="#0d47a1" stroke-width="1.5" filter="url(#shHen)"/>
+<text x="135" y="144" text-anchor="middle" font-size="12" font-weight="700" fill="#0d47a1">R₁</text>
+<rect x="190" y="128" width="70" height="24" rx="3" fill="url(#gPrim)" stroke="#0d47a1" stroke-width="1.5" filter="url(#shHen)"/>
+<text x="225" y="144" text-anchor="middle" font-size="12" font-weight="700" fill="#0d47a1">X₁</text>
+<line x1="170" y1="140" x2="190" y2="140" stroke="#1565c0" stroke-width="2"/>
+<line x1="260" y1="140" x2="410" y2="140" stroke="#1565c0" stroke-width="2"/>
+<line x1="410" y1="140" x2="410" y2="220" stroke="#2e7d32" stroke-width="2"/>
+<rect x="380" y="160" width="60" height="24" rx="3" fill="url(#gExc)" stroke="#1b5e20" stroke-width="1.5" filter="url(#shHen)"/>
+<text x="410" y="176" text-anchor="middle" font-size="12" font-weight="700" fill="#1b5e20">R₀</text>
+<rect x="380" y="190" width="60" height="24" rx="3" fill="url(#gExc)" stroke="#1b5e20" stroke-width="1.5" filter="url(#shHen)"/>
+<text x="410" y="206" text-anchor="middle" font-size="12" font-weight="700" fill="#1b5e20">X₀</text>
+<text x="455" y="178" text-anchor="start" font-size="10" font-weight="700" fill="#1b5e20">励磁回路</text>
+<text x="455" y="194" text-anchor="start" font-size="10" fill="#1b5e20">（鉄損 Pᵢ・</text>
+<text x="455" y="210" text-anchor="start" font-size="10" fill="#1b5e20">励磁電流 I₀）</text>
+<line x1="410" y1="220" x2="410" y2="248" stroke="#1565c0" stroke-width="2" stroke-dasharray="3,2"/>
+<line x1="410" y1="140" x2="550" y2="140" stroke="#e65100" stroke-width="2"/>
+<rect x="550" y="128" width="70" height="24" rx="3" fill="url(#gSec)" stroke="#e65100" stroke-width="1.5" filter="url(#shHen)"/>
+<text x="585" y="144" text-anchor="middle" font-size="12" font-weight="700" fill="#e65100">R₂&apos;</text>
+<rect x="640" y="128" width="70" height="24" rx="3" fill="url(#gSec)" stroke="#e65100" stroke-width="1.5" filter="url(#shHen)"/>
+<text x="675" y="144" text-anchor="middle" font-size="12" font-weight="700" fill="#e65100">X₂&apos;</text>
+<line x1="620" y1="140" x2="640" y2="140" stroke="#e65100" stroke-width="2"/>
+<line x1="710" y1="140" x2="780" y2="140" stroke="#e65100" stroke-width="2"/>
+<text x="780" y="132" text-anchor="end" font-size="11" font-weight="700" fill="#bf360c">負荷</text>
+<text x="780" y="160" text-anchor="end" font-size="11" fill="#bf360c">V₂&apos;, I₂&apos;</text>
+<line x1="40" y1="248" x2="780" y2="248" stroke="#616161" stroke-width="2"/>
+<text x="410" y="268" text-anchor="middle" font-size="11" font-weight="700" fill="#424242">中性線・接地側（共通帰路）</text>
+<rect x="40" y="284" width="740" height="28" rx="4" fill="#fafafa" stroke="#bdbdbd" stroke-width="0.8"/>
+<text x="120" y="302" text-anchor="middle" font-size="10" font-weight="700" fill="#0d47a1">■ 青＝一次側</text>
+<text x="280" y="302" text-anchor="middle" font-size="10" font-weight="700" fill="#1b5e20">■ 緑＝励磁（鉄損担当）</text>
+<text x="460" y="302" text-anchor="middle" font-size="10" font-weight="700" fill="#e65100">■ 橙＝二次側 a² 倍換算</text>
+<text x="660" y="302" text-anchor="middle" font-size="10" fill="#616161">銅損=(R₁+R₂&apos;)·I² / 鉄損=V²/R₀</text>
 </svg></div>
 
 **読み解き**：左右の **青（一次）と橙（二次・a²倍換算）** が銅損を担う直列インピーダンス。中央の **緑の励磁回路（並列 $R_0 \parallel X_0$）** が鉄損と励磁電流を担う。励磁回路は印加電圧で決まるため負荷電流に依らない → これが「鉄損は一定」の物理的根拠。
