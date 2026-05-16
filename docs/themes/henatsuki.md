@@ -286,22 +286,22 @@ $$\alpha_m = \sqrt{\frac{P_i}{P_{c,full}}}$$
 <text x="62" y="262" text-anchor="end" font-size="11" fill="#424242">70%</text>
 <text x="62" y="300" text-anchor="end" font-size="11" fill="#424242">60%</text>
 <text x="32" y="180" text-anchor="middle" font-size="12" font-weight="700" fill="#424242" transform="rotate(-90 32 180)">効率 η [%]</text>
-<path d="M 80 296 Q 130 240 200 180 Q 260 130 320 116 Q 380 130 440 160 Q 500 190 560 210 Q 620 224 680 234" fill="none" stroke="#1565c0" stroke-width="3"/>
-<circle cx="320" cy="116" r="7" fill="#fb8c00" stroke="#bf360c" stroke-width="2.5"/>
-<line x1="320" y1="116" x2="320" y2="300" stroke="#bf8800" stroke-width="1" stroke-dasharray="3,2"/>
-<text x="320" y="106" text-anchor="middle" font-size="11" font-weight="700" fill="#bf360c">最大効率 ηmax≈93.4%</text>
+<path d="M 80 300 Q 130 240 200 195 Q 260 175 320 165 Q 380 168 440 172 Q 500 176 560 180 Q 620 192 680 204" fill="none" stroke="#1565c0" stroke-width="3"/>
+<circle cx="320" cy="165" r="7" fill="#fb8c00" stroke="#bf360c" stroke-width="2.5"/>
+<line x1="320" y1="165" x2="320" y2="300" stroke="#bf8800" stroke-width="1" stroke-dasharray="3,2"/>
+<text x="320" y="156" text-anchor="middle" font-size="11" font-weight="700" fill="#bf360c">最大効率 ηmax≈86.2%</text>
 <text x="320" y="336" text-anchor="middle" font-size="11" font-weight="700" fill="#bf360c">αₘ=0.5</text>
 <rect x="430" y="80" width="240" height="78" rx="6" fill="#e3f2fd" stroke="#1976d2" stroke-width="1.2"/>
 <text x="550" y="100" text-anchor="middle" font-size="11" font-weight="700" fill="#0d47a1">▼ 最大効率の位置の出し方</text>
 <text x="550" y="118" text-anchor="middle" font-size="10" fill="#0d47a1">αₘ = √(Pᵢ/Pc,full) = √(400/1600) = 0.5</text>
-<text x="550" y="134" text-anchor="middle" font-size="10" fill="#0d47a1">ηmax 分母 = αₘSₙcosθ + 2Pᵢ</text>
-<text x="550" y="150" text-anchor="middle" font-size="10" fill="#0d47a1">= 5000 + 800 = 5800 → 93.4%</text>
-<circle cx="560" cy="210" r="5" fill="#7b1fa2" stroke="#4a148c" stroke-width="1.5"/>
-<text x="560" y="225" text-anchor="middle" font-size="10" font-weight="700" fill="#4a148c">定格点 η≈83.3%</text>
-<text x="560" y="240" text-anchor="middle" font-size="10" fill="#4a148c">（鉄損+銅損=2000W）</text>
+<text x="550" y="134" text-anchor="middle" font-size="10" fill="#0d47a1">ηmax = αₘSₙcosθ / (αₘSₙcosθ + 2Pᵢ)</text>
+<text x="550" y="150" text-anchor="middle" font-size="10" fill="#0d47a1">= 5000 / (5000 + 800) = 5000/5800 ≈ 86.2%</text>
+<circle cx="560" cy="180" r="5" fill="#7b1fa2" stroke="#4a148c" stroke-width="1.5"/>
+<text x="560" y="195" text-anchor="middle" font-size="10" font-weight="700" fill="#4a148c">定格点 η≈83.3%</text>
+<text x="560" y="210" text-anchor="middle" font-size="10" fill="#4a148c">（鉄損+銅損=2000W）</text>
 </svg></div>
 
-**読み解き**：青の山型カーブが効率 $\eta(\alpha)$。$\alpha = 0.5$ で頂点（**最大効率 93.4 %**）に達し、軽負荷でも過負荷でも効率は低下する。最大効率点は §B 図の「鉄損＝銅損の交点」と同じ位置で、$\alpha_m = \sqrt{P_i/P_{c,full}}$。定格点（$\alpha=1.0$）の効率は鉄損 + 定格銅損 = 2000 W で 83.3 % と、最大効率点より低い。
+**読み解き**：青の山型カーブが効率 $\eta(\alpha)$。$\alpha = 0.5$ で頂点（**最大効率 86.2 %**）に達し、軽負荷でも過負荷でも効率は低下する。最大効率点は §B 図の「鉄損＝銅損の交点」と同じ位置で、$\alpha_m = \sqrt{P_i/P_{c,full}}$。定格点（$\alpha=1.0$）の効率は鉄損 + 定格銅損 = 2000 W で 83.3 % と、最大効率点（86.2 %）より約 3 ポイント低いだけ — 実機の変圧器が「最大効率と定格効率がほぼフラットな山」になるのはこの理由。
 
 !!! tip "🔗 次のステップ：損失深掘りページへ"
     鉄損・銅損・効率の **瞬時的な基本** が理解できたら、次は
