@@ -246,6 +246,13 @@ $$P_c = I^2 R \quad \propto \text{（負荷率）}^2$$
 <path d="M 80 274 Q 200 270 320 210 T 560 64 Q 605 36 645 16" fill="none" stroke="#1565c0" stroke-width="3"/>
 <text x="160" y="100" text-anchor="start" font-size="12" font-weight="700" fill="#1565c0">合計損失 Pᵢ + α²·Pc,full</text>
 <text x="160" y="116" text-anchor="start" font-size="10" fill="#1565c0">（U字曲線）</text>
+<circle cx="320" cy="210" r="5" fill="#1565c0" stroke="#0d47a1" stroke-width="1.5"/>
+<line x1="320" y1="210" x2="320" y2="274" stroke="#bf8800" stroke-width="1" stroke-dasharray="2,2"/>
+<line x1="270" y1="210" x2="370" y2="210" stroke="#0d47a1" stroke-width="1.5" stroke-dasharray="4,3"/>
+<text x="220" y="200" text-anchor="end" font-size="10" font-weight="700" fill="#0d47a1">U字の谷（傾き0）</text>
+<text x="220" y="214" text-anchor="end" font-size="9" fill="#0d47a1">＝2Pᵢ=800W</text>
+<text x="308" y="246" text-anchor="end" font-size="9" fill="#bf360c">↕ 交点と谷は</text>
+<text x="308" y="258" text-anchor="end" font-size="9" fill="#bf360c">同じα位置</text>
 <circle cx="320" cy="274" r="6" fill="#fb8c00" stroke="#bf360c" stroke-width="2"/>
 <line x1="320" y1="274" x2="320" y2="320" stroke="#bf8800" stroke-width="1" stroke-dasharray="3,2"/>
 <text x="320" y="356" text-anchor="middle" font-size="11" font-weight="700" fill="#bf360c">αₘ=0.5</text>
@@ -322,6 +329,14 @@ $$\alpha_m = \sqrt{\frac{P_i}{P_{c,full}}}$$
 <circle cx="560" cy="180" r="5" fill="#7b1fa2" stroke="#4a148c" stroke-width="1.5"/>
 <text x="560" y="195" text-anchor="middle" font-size="10" font-weight="700" fill="#4a148c">定格点 η≈83.3%</text>
 <text x="560" y="210" text-anchor="middle" font-size="10" fill="#4a148c">（鉄損+銅損=2000W）</text>
+<line x1="560" y1="180" x2="560" y2="300" stroke="#7b1fa2" stroke-width="1" stroke-dasharray="3,2"/>
+<text x="560" y="336" text-anchor="middle" font-size="11" font-weight="700" fill="#4a148c">α=1.0</text>
+<line x1="80" y1="165" x2="320" y2="165" stroke="#bf360c" stroke-width="1" stroke-dasharray="3,2"/>
+<line x1="80" y1="180" x2="560" y2="180" stroke="#4a148c" stroke-width="1" stroke-dasharray="3,2"/>
+<text x="92" y="174" text-anchor="start" font-size="9" font-weight="700" fill="#bf360c">η_max</text>
+<text x="92" y="192" text-anchor="start" font-size="9" font-weight="700" fill="#4a148c">η_rated</text>
+<text x="600" y="172" text-anchor="start" font-size="10" font-weight="700" fill="#bf360c">Δη≈3pt</text>
+<text x="600" y="184" text-anchor="start" font-size="9" fill="#4a148c">（実機がほぼフラット）</text>
 </svg></div>
 
 **読み解き**：青の山型カーブが効率 $\eta(\alpha)$。$\alpha = 0.5$ で頂点（**最大効率 86.2 %**）に達し、軽負荷でも過負荷でも効率は低下する。最大効率点は §B 図の「鉄損＝銅損の交点」と同じ位置で、$\alpha_m = \sqrt{P_i/P_{c,full}}$。定格点（$\alpha=1.0$）の効率は鉄損 + 定格銅損 = 2000 W で 83.3 % と、最大効率点（86.2 %）より約 3 ポイント低いだけ — 実機の変圧器が「最大効率と定格効率がほぼフラットな山」になるのはこの理由。

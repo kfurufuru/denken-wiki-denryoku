@@ -229,12 +229,16 @@ $$\text{単純回収年} = \frac{I}{\Delta W_{year} \times C} \quad [\text{年}]
 <div><svg viewBox="0 0 760 360" xmlns="http://www.w3.org/2000/svg" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-label="アモルファスと珪素鋼板のBH曲線比較">
 <text x="380" y="24" text-anchor="middle" font-size="15" font-weight="700" fill="#212121">BH 曲線（ヒステリシスループ）で見る鉄損</text>
 <text x="380" y="44" text-anchor="middle" font-size="11" fill="#666">ループ内側の面積 = 1 サイクルで失うエネルギー（ヒステリシス損）</text>
+<text x="380" y="92" text-anchor="middle" font-size="12" font-weight="700" fill="#212121">W_h = ∮ H dB  [J/m³/サイクル]</text>
+<text x="380" y="108" text-anchor="middle" font-size="10" fill="#666">ヒステリシス損 = ループ内側の面積 × 周波数 × 鉄心体積</text>
 <text x="190" y="68" text-anchor="middle" font-size="13" font-weight="700" fill="#1565c0">珪素鋼板（従来）</text>
 <line x1="60" y1="200" x2="320" y2="200" stroke="#424242" stroke-width="1"/>
 <line x1="190" y1="80" x2="190" y2="320" stroke="#424242" stroke-width="1"/>
 <text x="318" y="216" text-anchor="end" font-size="10" fill="#666">H</text>
 <text x="200" y="92" text-anchor="start" font-size="10" fill="#666">B</text>
 <path d="M 90 256 Q 100 200 130 160 Q 170 100 250 110 Q 280 130 290 144 Q 280 200 250 240 Q 210 300 130 290 Q 100 270 90 256 Z" fill="#bbdefb" fill-opacity="0.5" stroke="#1565c0" stroke-width="2"/>
+<text x="190" y="220" text-anchor="middle" font-size="10" font-weight="700" fill="#0d47a1">この面積</text>
+<text x="190" y="234" text-anchor="middle" font-size="10" font-weight="700" fill="#0d47a1">= ∮H dB</text>
 <text x="190" y="338" text-anchor="middle" font-size="11" font-weight="700" fill="#0d47a1">面積大 → ヒステリシス損 大</text>
 <text x="190" y="354" text-anchor="middle" font-size="10" fill="#0d47a1">（基準 1.0）</text>
 <text x="570" y="68" text-anchor="middle" font-size="13" font-weight="700" fill="#2e7d32">アモルファス（非晶質）</text>
@@ -243,6 +247,8 @@ $$\text{単純回収年} = \frac{I}{\Delta W_{year} \times C} \quad [\text{年}]
 <text x="698" y="216" text-anchor="end" font-size="10" fill="#666">H</text>
 <text x="580" y="92" text-anchor="start" font-size="10" fill="#666">B</text>
 <path d="M 530 230 Q 540 200 555 175 Q 580 120 620 115 Q 635 135 640 156 Q 635 200 620 225 Q 595 280 555 285 Q 540 270 530 230 Z" fill="#c8e6c9" fill-opacity="0.5" stroke="#2e7d32" stroke-width="2"/>
+<text x="570" y="220" text-anchor="middle" font-size="10" font-weight="700" fill="#1b5e20">この面積</text>
+<text x="570" y="234" text-anchor="middle" font-size="10" font-weight="700" fill="#1b5e20">= ∮H dB</text>
 <text x="570" y="338" text-anchor="middle" font-size="11" font-weight="700" fill="#1b5e20">面積小 → ヒステリシス損 約 1/3</text>
 <text x="570" y="354" text-anchor="middle" font-size="10" fill="#1b5e20">（細長く狭いループ）</text>
 <rect x="330" y="120" width="100" height="120" rx="8" fill="#fff8e1" stroke="#f57c00" stroke-width="1.5"/>
@@ -410,6 +416,11 @@ $$\text{単純回収年} = \frac{I}{\Delta W_{year} \times C} \quad [\text{年}]
 <polygon points="225,126 235,126 230,134" fill="#f9a825"/>
 <line x1="580" y1="104" x2="580" y2="128" stroke="#f9a825" stroke-width="2"/>
 <polygon points="575,126 585,126 580,134" fill="#f9a825"/>
+<line x1="400" y1="355" x2="416" y2="355" stroke="#e65100" stroke-width="2.5"/>
+<polygon points="414,350 414,360 422,355" fill="#e65100"/>
+<text x="410" y="346" text-anchor="middle" font-size="9" font-weight="700" fill="#e65100">流用</text>
+<rect x="608" y="334" width="42" height="14" rx="3" fill="#fff3e0" stroke="#e65100" stroke-width="1"/>
+<text x="629" y="344" text-anchor="middle" font-size="9" font-weight="700" fill="#bf360c">(a)の値</text>
 </svg></div>
 
 **読み解き**：左ルートが (a) の解法、右ルートが (b) の解法。共通条件（黄色）からそれぞれ 2 ステップで橙色の正答ボックスに到達する。**両ルートの罠**：(a) は「負荷率 40 % 評価」を忘れない（×0.16）、(b) は「皮相基準で負荷率算定」して「銅損は $\alpha^2$ 比例」（×0.5625）。
