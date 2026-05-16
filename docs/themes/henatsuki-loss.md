@@ -7,6 +7,13 @@ related_themes: [変圧器（基礎ハブ）, 配電線路, 電力系統・需�
 
 # 変圧器の損失と効率（深掘り）— 全日効率・年間損失・更新経済性
 
+!!! note "🗺️ 棲み分けマップ"
+    **[変圧器（基礎ハブ）](henatsuki.md)**：巻数比・等価回路・損失分類・最大効率条件・並行運転の **全体俯瞰**。
+
+    **本ページ（henatsuki-loss.md / 深掘り）**：全日効率の本格計算・年間損失電力量・更新経済性評価（法規 R04下問12 など B 問題対策）の **深掘りハブ**。
+
+    使い分け：概念整理は基礎ハブ → 長時間運用・更新判断は本ページへ遷移。
+
 !!! note "📊 試験対策メタ"
     **本ページの役割**: [変圧器（基礎ハブ）](henatsuki.md) の損失・効率セクション（§4 レイヤーB・§5 パターン①②）を前提に、**全日効率の本格計算／年間損失電力量／更新経済性評価** に深掘りする。法規B問題（施設管理）の「変圧器更新による損失の変化」型出題と直結する。
 
@@ -59,6 +66,52 @@ $$\eta_{day} = \frac{\displaystyle \sum_k P_{out,k}\,t_k}{\displaystyle \sum_k P
 5. 定義式に代入
 
 ### 2.3 計算例（時間別負荷パターン）
+
+#### ビジュアル：1 日の損失構成
+
+<div><svg viewBox="0 0 820 320" xmlns="http://www.w3.org/2000/svg" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-label="1日の出力と損失の時間別階段グラフ">
+<defs>
+<filter id="shLoss" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity="0.15"/></filter>
+<linearGradient id="gLoad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bbdefb"/><stop offset="100%" stop-color="#64b5f6"/></linearGradient>
+<linearGradient id="gCu" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#a5d6a7"/><stop offset="100%" stop-color="#66bb6a"/></linearGradient>
+</defs>
+<text x="410" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#212121">1 日の出力と損失（鉄損は 24h 一定・銅損は負荷率² で振れる）</text>
+<text x="410" y="40" text-anchor="middle" font-size="10" fill="#666">100 kVA 変圧器・力率 1.0・$P_i$=500 W・$P_{c,full}$=1500 W</text>
+<line x1="80" y1="280" x2="780" y2="280" stroke="#424242" stroke-width="1.5"/>
+<line x1="80" y1="60" x2="80" y2="280" stroke="#424242" stroke-width="1.5"/>
+<text x="80" y="298" text-anchor="middle" font-size="10" fill="#424242">0h</text>
+<text x="313" y="298" text-anchor="middle" font-size="10" fill="#424242">8h</text>
+<text x="604" y="298" text-anchor="middle" font-size="10" fill="#424242">18h</text>
+<text x="780" y="298" text-anchor="middle" font-size="10" fill="#424242">24h</text>
+<text x="430" y="312" text-anchor="middle" font-size="11" font-weight="700" fill="#424242">時間 [h]</text>
+<text x="40" y="80" text-anchor="middle" font-size="10" fill="#1565c0">100 kW</text>
+<text x="40" y="172" text-anchor="middle" font-size="10" fill="#1565c0">60 kW</text>
+<text x="40" y="245" text-anchor="middle" font-size="10" fill="#1565c0">20 kW</text>
+<text x="40" y="280" text-anchor="middle" font-size="10" fill="#1565c0">0</text>
+<text x="22" y="170" text-anchor="middle" font-size="11" font-weight="700" fill="#1565c0" transform="rotate(-90 22 170)">出力 [kW]</text>
+<rect x="80" y="247" width="233" height="33" fill="url(#gLoad)" stroke="#1976d2" stroke-width="1.5" filter="url(#shLoss)"/>
+<text x="196" y="266" text-anchor="middle" font-size="11" font-weight="700" fill="#0d47a1">深夜 20 kW × 8h</text>
+<rect x="313" y="173" width="291" height="107" fill="url(#gLoad)" stroke="#1976d2" stroke-width="1.5" filter="url(#shLoss)"/>
+<text x="458" y="225" text-anchor="middle" font-size="11" font-weight="700" fill="#0d47a1">朝夕 60 kW × 10h</text>
+<rect x="604" y="80" width="176" height="200" fill="url(#gLoad)" stroke="#1976d2" stroke-width="1.5" filter="url(#shLoss)"/>
+<text x="692" y="180" text-anchor="middle" font-size="11" font-weight="700" fill="#0d47a1">昼間 100 kW × 6h</text>
+<line x1="80" y1="274" x2="780" y2="274" stroke="#d32f2f" stroke-width="2" stroke-dasharray="5,3"/>
+<text x="785" y="277" text-anchor="start" font-size="10" font-weight="700" fill="#d32f2f">鉄損 500 W（24h 一定）</text>
+<rect x="80" y="272" width="233" height="2" fill="#2e7d32"/>
+<text x="196" y="270" text-anchor="middle" font-size="9" font-weight="700" fill="#1b5e20">α²×1500 = 60 W</text>
+<rect x="313" y="266" width="291" height="8" fill="url(#gCu)" stroke="#2e7d32" stroke-width="1"/>
+<text x="458" y="262" text-anchor="middle" font-size="9" font-weight="700" fill="#1b5e20">α²×1500 = 540 W</text>
+<rect x="604" y="251" width="176" height="23" fill="url(#gCu)" stroke="#2e7d32" stroke-width="1.5"/>
+<text x="692" y="247" text-anchor="middle" font-size="9" font-weight="700" fill="#1b5e20">α²×1500 = 1500 W</text>
+<rect x="540" y="40" width="248" height="48" rx="6" fill="#fffde7" stroke="#f9a825" stroke-width="1.2"/>
+<text x="664" y="58" text-anchor="middle" font-size="10" font-weight="700" fill="#e65100">鉄損総量 = 500 × 24 = 12 kWh</text>
+<text x="664" y="72" text-anchor="middle" font-size="10" font-weight="700" fill="#1b5e20">銅損総量 = 60×8 + 540×10 + 1500×6 = 14.88 kWh</text>
+<text x="664" y="84" text-anchor="middle" font-size="10" font-weight="700" fill="#1565c0">出力電力量 = 1360 kWh → η_day ≈ 98.06%</text>
+</svg></div>
+
+**読み解き**：青の階段が **出力**（深夜→朝夕→昼間で 20→60→100 kW）、赤の点線が **鉄損 500 W（24h 一定）**、緑の薄い帯が **銅損 60→540→1500 W（負荷率²で大きく振れる）**。鉄損は「面積 = 一定値 × 24h」、銅損は「時間帯ごとに高さが負荷率²で変わる」面積積分になる。右上の黄色ボックスが §2.3 計算例の最終値。
+
+---
 
 定格 100 kVA、力率 1.0、鉄損 $P_i = 500$ W、定格銅損 $P_{c(full)} = 1500$ W の変圧器を、次の負荷パターンで運転する：
 
@@ -132,8 +185,31 @@ $$\text{単純回収年} = \frac{I}{\Delta W_{year} \times C} \quad [\text{年}]
 
 ### 4.3 アモルファス変圧器とトップランナー規制
 
-- **アモルファス鉄心**：磁区構造が結晶質と異なり、ヒステリシス損が珪素鋼板の 1/3 程度。鉄損を大幅に削減
-- **トップランナー規制**：エネルギーの使用の合理化等に関する法律（省エネ法）に基づき、変圧器の効率基準が段階的に強化されてきた。配電用変圧器の更新時、トップランナー基準対応機への置換が省エネ投資として推奨される
+#### 鉄心材料の比較
+
+| 項目 | 珪素鋼板（従来） | アモルファス | 備考 |
+|---|---|---|---|
+| 結晶構造 | 結晶質（規則的に配列） | 非晶質（ランダム配列） | アモルファスは磁区の向き転換が容易 |
+| ヒステリシス損 | 基準（1.0） | **約 1/3** | 軽負荷時間が長いほど効果絶大 |
+| 渦電流損 | 板厚 0.35 mm 級で抑制 | 板厚 25 μm 級でさらに抑制 | アモルファスは薄帯製造（10 倍以上薄い） |
+| 占積率 | 高い（製造容易） | やや低い（薄帯巻きが必要） | サイズはやや大型化する傾向 |
+| 製造コスト | 標準 | 1.3〜1.5 倍 | 高めだが鉄損削減で長期回収可 |
+| 騒音 | 標準 | やや大きめ | 磁歪が大きい — 居住地近接は留意 |
+| 主用途 | 産業用大型・特殊用途 | 配電用変圧器（柱上・地上） | 軽負荷率が長時間の用途で優位 |
+
+!!! note "なぜアモルファスは軽負荷で有利か"
+    軽負荷の長時間運転では銅損より鉄損が支配的になる（§2.3 計算例でも鉄損 12 kWh／銅損 14.88 kWh と拮抗）。鉄損を 1/3 にできれば全日損失で大きな差が出る。逆に高負荷で 24h 稼働する産業用大型変圧器では銅損が支配的で、アモルファスの優位性は相対的に小さくなる。
+
+#### トップランナー規制の経緯
+
+- **2002 年**：省エネ法（エネルギーの使用の合理化等に関する法律）にトップランナー方式導入
+- **2006 年**：第 1 次基準（500 kVA 以下の配電用油入変圧器を対象）
+- **2014 年**：第 2 次基準（モールド変圧器も対象に・効率基準を 30〜40 % 強化）
+- **R04 下問12 出題当時**：第 2 次基準が適用中。「省エネ基準達成率 140 %」のような派生型出題が増加
+- **判定式**：$\text{達成率}[\%] = \dfrac{\text{基準エネルギー消費効率}}{W_i + W_{c40}} \times 100$（負荷率 40 % 評価）
+
+!!! warning "規制値の改定タイミングに注意"
+    トップランナー基準は **施行年で具体的数値が変わる**。本ページの数値は 2026 年時点の運用解釈。最新の基準値は経済産業省告示で確認すべき。試験問題は出題時点の規制値を前提とするので、問題文に明示された値（本問なら 1,250 W）をそのまま使う。
 
 !!! note "なぜアモルファスが軽負荷で有利か"
     軽負荷の長時間運転では銅損より鉄損が支配的になる。鉄損を大幅に下げるアモルファスは、配電用変圧器（負荷率 0.2〜0.4 が長時間）で効果絶大。逆に高負荷で 24h 稼働する産業用大型変圧器では銅損が支配的で、アモルファスの優位性は相対的に小さくなる。
@@ -160,13 +236,7 @@ $$\text{単純回収年} = \frac{I}{\Delta W_{year} \times C} \quad [\text{年}]
 
 **問題のキーワード**：「1 日の負荷曲線」「全日効率」「軽負荷○h、重負荷○h」
 
-**手順**：
-1. 時間帯ごとに $\alpha_k$、$t_k$、$P_{out,k}$ を整理
-2. 出力電力量 $\sum P_{out,k} t_k$ を集計
-3. 鉄損 $24 P_i$、銅損 $\sum \alpha_k^2 P_{c(full)} t_k$ を集計
-4. 全日効率の定義式に代入
-
-→ §2.3 の計算例参照。
+→ 詳細手順は [セクション 2.2 解法フロー](#22) の 5 ステップを参照。計算例は [セクション 2.3](#23) 参照（最終値 η_day ≈ 98.06 %）。
 
 ### パターン②：年間損失電力量と年間電気代
 

@@ -7,6 +7,13 @@ related_themes: [架空送電線路, 開閉装置・保護継電器, 配電線�
 
 # 変圧器
 
+!!! note "🗺️ 棲み分けマップ"
+    **本ページ（henatsuki.md / 基礎ハブ）**：巻数比・等価回路・損失分類・最大効率条件・並行運転・電圧変動率の **全体俯瞰**。
+
+    **[変圧器の損失と効率（深掘り）](henatsuki-loss.md)**：全日効率の本格計算・年間損失電力量・更新経済性評価（法規 R04下問12 など B 問題対策）の **深掘りハブ**。
+
+    使い分け：概念整理は本ページ → 長時間運用・更新判断は深掘りページへ遷移。
+
 ## 1. 直感的理解
 
 **変圧器の本質**: 巻数比で電圧・電流が逆比例する。磁束を介して一次側から二次側へエネルギーを転送する電気機器。
@@ -111,6 +118,59 @@ $$R_2' = a^2 R_2, \quad X_2' = a^2 X_2$$
 
 !!! note "インピーダンス換算が「a²倍」になる理由"
     一次側から見た二次側の等価インピーダンスは $Z_1 = V_1/I_1$。換算後の電圧は $V_1 = aV_2$、換算後の電流は $I_1 = I_2/a$。これを代入すると $Z_1 = aV_2/(I_2/a) = a^2 \cdot (V_2/I_2) = a^2 Z_2$。電圧が a 倍・電流が 1/a 倍になるため、インピーダンスは $a \times a = a^2$ 倍になる。
+
+#### 等価回路図（T 字型・一次側換算）
+
+二次側を一次側に換算した T 字型等価回路は次のようになる。励磁回路（$R_0, X_0$）は鉄損と励磁電流を担い、巻線抵抗・漏れリアクタンス（$R_1, X_1, R_2', X_2'$）は銅損と電圧変動率の根源。
+
+<div><svg viewBox="0 0 760 260" xmlns="http://www.w3.org/2000/svg" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-label="変圧器のT字型等価回路（一次側換算）">
+<defs>
+<filter id="shHen" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity="0.18"/></filter>
+<linearGradient id="gPrim" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bbdefb"/><stop offset="100%" stop-color="#90caf9"/></linearGradient>
+<linearGradient id="gSec" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffe0b2"/><stop offset="100%" stop-color="#ffcc80"/></linearGradient>
+<linearGradient id="gExc" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#c8e6c9"/><stop offset="100%" stop-color="#a5d6a7"/></linearGradient>
+</defs>
+<text x="380" y="22" text-anchor="middle" font-size="14" font-weight="700" fill="#212121">T 字型等価回路（一次側換算・単相）</text>
+<line x1="40" y1="80" x2="100" y2="80" stroke="#1565c0" stroke-width="2"/>
+<text x="40" y="72" text-anchor="start" font-size="11" font-weight="700" fill="#0d47a1">一次端子</text>
+<text x="35" y="100" text-anchor="start" font-size="11" fill="#0d47a1">V₁, I₁</text>
+<rect x="100" y="68" width="60" height="24" rx="3" fill="url(#gPrim)" stroke="#0d47a1" stroke-width="1.5" filter="url(#shHen)"/>
+<text x="130" y="84" text-anchor="middle" font-size="11" font-weight="700" fill="#0d47a1">R₁</text>
+<rect x="170" y="68" width="60" height="24" rx="3" fill="url(#gPrim)" stroke="#0d47a1" stroke-width="1.5" filter="url(#shHen)"/>
+<text x="200" y="84" text-anchor="middle" font-size="11" font-weight="700" fill="#0d47a1">X₁</text>
+<line x1="160" y1="80" x2="170" y2="80" stroke="#1565c0" stroke-width="2"/>
+<text x="135" y="58" text-anchor="middle" font-size="10" fill="#1565c0">一次巻線抵抗</text>
+<text x="200" y="58" text-anchor="middle" font-size="10" fill="#1565c0">一次漏れリアクタンス</text>
+<line x1="230" y1="80" x2="380" y2="80" stroke="#1565c0" stroke-width="2"/>
+<line x1="380" y1="80" x2="380" y2="160" stroke="#2e7d32" stroke-width="2"/>
+<rect x="350" y="100" width="60" height="24" rx="3" fill="url(#gExc)" stroke="#1b5e20" stroke-width="1.5" filter="url(#shHen)"/>
+<text x="380" y="116" text-anchor="middle" font-size="11" font-weight="700" fill="#1b5e20">R₀</text>
+<rect x="350" y="130" width="60" height="24" rx="3" fill="url(#gExc)" stroke="#1b5e20" stroke-width="1.5" filter="url(#shHen)"/>
+<text x="380" y="146" text-anchor="middle" font-size="11" font-weight="700" fill="#1b5e20">X₀</text>
+<text x="445" y="120" text-anchor="start" font-size="10" fill="#1b5e20">励磁回路</text>
+<text x="445" y="135" text-anchor="start" font-size="10" fill="#1b5e20">（鉄損 Pᵢ・</text>
+<text x="445" y="148" text-anchor="start" font-size="10" fill="#1b5e20">励磁電流 I₀）</text>
+<line x1="380" y1="160" x2="380" y2="180" stroke="#1565c0" stroke-width="2" stroke-dasharray="3,2"/>
+<line x1="380" y1="80" x2="490" y2="80" stroke="#e65100" stroke-width="2"/>
+<rect x="490" y="68" width="60" height="24" rx="3" fill="url(#gSec)" stroke="#e65100" stroke-width="1.5" filter="url(#shHen)"/>
+<text x="520" y="84" text-anchor="middle" font-size="11" font-weight="700" fill="#e65100">R₂&apos;</text>
+<rect x="560" y="68" width="60" height="24" rx="3" fill="url(#gSec)" stroke="#e65100" stroke-width="1.5" filter="url(#shHen)"/>
+<text x="590" y="84" text-anchor="middle" font-size="11" font-weight="700" fill="#e65100">X₂&apos;</text>
+<line x1="550" y1="80" x2="560" y2="80" stroke="#e65100" stroke-width="2"/>
+<text x="520" y="58" text-anchor="middle" font-size="10" fill="#e65100">二次換算抵抗</text>
+<text x="590" y="58" text-anchor="middle" font-size="10" fill="#e65100">二次換算リアクタンス</text>
+<line x1="620" y1="80" x2="700" y2="80" stroke="#e65100" stroke-width="2"/>
+<text x="710" y="72" text-anchor="start" font-size="11" font-weight="700" fill="#bf360c">負荷</text>
+<text x="710" y="92" text-anchor="start" font-size="11" fill="#bf360c">V₂&apos;, I₂&apos;</text>
+<line x1="40" y1="180" x2="700" y2="180" stroke="#616161" stroke-width="2"/>
+<text x="380" y="200" text-anchor="middle" font-size="11" font-weight="700" fill="#424242">中性線・接地側（共通帰路）</text>
+<text x="220" y="230" text-anchor="middle" font-size="10" fill="#0d47a1">青：一次側（換算前 R₁・X₁）</text>
+<text x="380" y="230" text-anchor="middle" font-size="10" fill="#1b5e20">緑：励磁（鉄損担当）</text>
+<text x="540" y="230" text-anchor="middle" font-size="10" fill="#e65100">橙：二次側（a² 倍換算）</text>
+<text x="380" y="248" text-anchor="middle" font-size="10" fill="#616161">銅損 = (R₁ + R₂&apos;) × I² ／ 鉄損 = V²/R₀</text>
+</svg></div>
+
+**読み解き**：左右の **青（一次）と橙（二次・a²倍換算）** が銅損を担う直列インピーダンス。中央の **緑の励磁回路（並列 $R_0 \parallel X_0$）** が鉄損と励磁電流を担う。励磁回路は印加電圧で決まるため負荷電流に依らない → これが「鉄損は一定」の物理的根拠。
 
 ---
 
@@ -236,6 +296,27 @@ $$\varepsilon = 2 \times 0.8 + 4 \times 0.6 = 1.6 + 2.4 = 4.0\%$$
 
 ---
 
+## 5.5 自問ブロック（Recall 想起練習）
+
+理解度をセルフチェック。設問を読み口頭で答えてから折りたたみを開く。
+
+??? question "Q1：なぜ鉄損は負荷電流に依存しないのか？"
+    鉄損はヒステリシス損＋渦電流損で、どちらも **磁束密度の変化** で決まる。磁束密度は印加電圧と周波数で決まる（ファラデー則 $e=N\,d\phi/dt$）ため、一次電圧がほぼ一定なら磁束密度も一定。負荷電流が変わっても鉄損は変わらない。これが「無負荷損」と呼ばれる理由。
+
+??? question "Q2：なぜ最大効率条件は $P_i = \alpha^2 P_{c(full)}$ か？"
+    効率 $\eta(\alpha)$ を負荷率 $\alpha$ で微分し $d\eta/d\alpha=0$ を解くと条件 $P_i = \alpha^2 P_c$ が得られる。直感的には「固定損（鉄損）＝変動損（銅損）」のとき全損失に対する出力割合が最大。これは「固定費＝変動費のとき単位コスト最小」と同じ最適化構造。
+
+??? question "Q3：等価回路で二次側を一次側に換算するとなぜ $a^2$ 倍か？"
+    換算後の電圧 $V_1=aV_2$、換算後の電流 $I_1=I_2/a$。インピーダンスは $Z=V/I=aV_2/(I_2/a)=a^2(V_2/I_2)=a^2 Z_2$。**電圧 a 倍 × 電流 1/a 倍 → インピーダンス a²倍** がエネルギー保存則の自然な帰結。
+
+??? question "Q4：並行運転で %Z が異なる変圧器を並列すると何が起きるか？"
+    分担電流はインピーダンスに **反比例** する。%Z が小さい変圧器ほど多くの電流を分担するため、容量比と一致しない負荷分担になり、**%Z が小さい側が過負荷**になる。容量比 = 1:1 でも %Z が違えば均等分担できない。
+
+??? question "Q5：無電圧切換と負荷時切換、停止が必要なのはどちらか？"
+    **無電圧切換**（オフロードタップチェンジャー）。名前の通り「電圧が印加されていない」状態で機械接点を動かすため、変圧器を **停止してから切り換える**。停止不要なのは「負荷時タップ切換装置」（オンロードタップチェンジャー）。「無電圧 = 電圧を切らない」と誤読しやすい引っかけ。
+
+---
+
 ## 6. 引っかけパターン
 
 !!! warning "引っかけ①：鉄損が負荷電流で変化すると誤解する"
@@ -275,27 +356,36 @@ $$\varepsilon = 2 \times 0.8 + 4 \times 0.6 = 1.6 + 2.4 = 4.0\%$$
 
 > 出題数約27問。効率計算・最大効率・並行運転の計算問題が頻出。論説では変圧器の種類・タップ切換が問われる。
 
-| 年度 | 問 | タイトル | 問題タイプ | 難易度 |
-|------|---|---------|----------|--------|
-| R07下 | 問6 | 避雷器に使用される素子とその特徴 | 論説 | ★★☆☆☆ |
-| R07上 | 問6 | ガス絶縁開閉装置の特徴 | 論説 | ★☆☆☆☆ |
-| R06下 | 問6 | 調相設備接続による無効電力の調整 | 論説 | ★★☆☆☆ |
-| R06下 | 問7 | 計器用変成器の取扱い上の注意点 | 論説 | ★★☆☆☆ |
-| R06上 | 問16 | 変圧器に設置する遮断器の定格遮断電流と負荷分担 | 計算 | ★★★☆☆ |
-| R05下 | 問6 | 変圧器のY-Y結線の特徴 | 論説 | ★★☆☆☆ |
-| R05上 | 問13 | 変圧器並行運転時の過負荷容量 | 計算 | ★★☆☆☆ |
-| R05上 | 問16 | 三相変圧器二次側の遮断器定格遮断電流 | 計算 | ★★☆☆☆ |
-| R04下 | 問6 | 三相変圧器の百分率リアクタンス導出 | 計算 | ★★☆☆☆ |
-| R04下 | 問7 | 変圧器の結線方式の違いと特性 | 論説 | ★★☆☆☆ |
-| R04上 | 問16 | 変圧器に設置する遮断器の定格遮断電流 | 計算 | ★★★☆☆ |
-| R03 | 問7 | 変電所の計器用変成器 | 論説 | ★☆☆☆☆ |
-| R03 | 問9 | 変圧器故障時の過負荷運転 | 計算 | ★★★☆☆ |
-| R02 | 問7 | 真空遮断器の特徴及び動作メカニズム | 論説 | ★★☆☆☆ |
-| R01 | 問8 | 保護継電器の動作時間 | 計算 | ★★★★★ |
-| H30 | 問7 | 変圧器の保全・診断 | 論説 | ★★★★☆ |
-| H30 | 問12 | 変圧器のV結線方式 | 計算 | ★★★☆☆ |
-| H28 | 問16 | 事故時に流れる電流 | 計算 | ★★★★☆ |
-| H26 | 問6 | 配電用変電所の容量 | 計算 | ★★★★☆ |
+!!! tip "論点別フィルタの使い方"
+    「論点」列を見て **同じ論点だけを横断学習**する（Interleaving）。例えば「結線」だけ拾えば R04下問7／R05下問6／H30問12／H29問7 が並び、Y-Y・Δ-Δ・V 結線の特徴の違いをまとめて押さえられる。
+
+| 年度 | 問 | 論点 | タイトル | 問題タイプ | 難易度 |
+|------|---|------|---------|----------|--------|
+| R07下 | 問6 | 周辺機器 | 避雷器に使用される素子とその特徴 | 論説 | ★★☆☆☆ |
+| R07上 | 問6 | 周辺機器 | ガス絶縁開閉装置の特徴 | 論説 | ★☆☆☆☆ |
+| R06下 | 問6 | 調相設備 | 調相設備接続による無効電力の調整 | 論説 | ★★☆☆☆ |
+| R06下 | 問7 | 周辺機器 | 計器用変成器の取扱い上の注意点 | 論説 | ★★☆☆☆ |
+| R06上 | 問16 | 遮断器・並行運転 | 変圧器に設置する遮断器の定格遮断電流と負荷分担 | 計算 | ★★★☆☆ |
+| R05下 | 問6 | 結線 | 変圧器のY-Y結線の特徴 | 論説 | ★★☆☆☆ |
+| R05上 | 問13 | 並行運転 | 変圧器並行運転時の過負荷容量 | 計算 | ★★☆☆☆ |
+| R05上 | 問16 | 遮断器 | 三相変圧器二次側の遮断器定格遮断電流 | 計算 | ★★☆☆☆ |
+| R04下 | 問6 | 等価回路 | 三相変圧器の百分率リアクタンス導出 | 計算 | ★★☆☆☆ |
+| R04下 | 問7 | 結線 | 変圧器の結線方式の違いと特性 | 論説 | ★★☆☆☆ |
+| R04上 | 問16 | 遮断器 | 変圧器に設置する遮断器の定格遮断電流 | 計算 | ★★★☆☆ |
+| R03 | 問7 | 周辺機器 | 変電所の計器用変成器 | 論説 | ★☆☆☆☆ |
+| R03 | 問9 | 過負荷 | 変圧器故障時の過負荷運転 | 計算 | ★★★☆☆ |
+| R02 | 問7 | 周辺機器 | 真空遮断器の特徴及び動作メカニズム | 論説 | ★★☆☆☆ |
+| R01 | 問8 | 保護 | 保護継電器の動作時間 | 計算 | ★★★★★ |
+| H30 | 問7 | 保全 | 変圧器の保全・診断 | 論説 | ★★★★☆ |
+| H30 | 問12 | 結線 | 変圧器のV結線方式 | 計算 | ★★★☆☆ |
+| H28 | 問16 | 短絡 | 事故時に流れる電流 | 計算 | ★★★★☆ |
+| H26 | 問6 | 容量 | 配電用変電所の容量 | 計算 | ★★★★☆ |
+
+**論点ハイライト**：
+- **結線**：R04下問7・R05下問6・H30問12（Y-Y／Δ-Δ／V 結線の特徴対比）
+- **遮断器**：R04上問16・R05上問16・R06上問16（定格遮断電流の連年出題）
+- **周辺機器**：R02・R03・R06下・R07上下（避雷器・GIS・計器用変成器のローテーション）
+- **損失・効率（単独計算）**：R03 以降単独出題が少ない → [深掘りページ §10](henatsuki-loss.md) で全日効率・更新経済性として再浮上中
 
 !!! note "R08出題予測"
     R03以降、変圧器の効率・最大効率の単独計算問題が少ない（関連計算は遮断器定格や並行運転に組み込まれる傾向）。R08では「変圧器の効率・最大効率（単独計算）」または「V結線の出力・利用率（H30以来の周期）」が有力。並行運転での負荷分担計算も直近2年（R05上・R06上）で出ており継続の可能性あり。
