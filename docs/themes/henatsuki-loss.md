@@ -215,6 +215,39 @@ $$\text{単純回収年} = \frac{I}{\Delta W_{year} \times C} \quad [\text{年}]
 !!! note "なぜアモルファスは軽負荷で有利か"
     軽負荷の長時間運転では銅損より鉄損が支配的になる（§2.3 計算例でも鉄損 12 kWh／銅損 14.88 kWh と拮抗）。鉄損を 1/3 にできれば全日損失で大きな差が出る。逆に高負荷で 24h 稼働する産業用大型変圧器では銅損が支配的で、アモルファスの優位性は相対的に小さくなる。
 
+#### 図解：BH 曲線で見る鉄損の差（ヒステリシス損 = ループ面積）
+
+<div><svg viewBox="0 0 760 360" xmlns="http://www.w3.org/2000/svg" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-label="アモルファスと珪素鋼板のBH曲線比較">
+<text x="380" y="24" text-anchor="middle" font-size="15" font-weight="700" fill="#212121">BH 曲線（ヒステリシスループ）で見る鉄損</text>
+<text x="380" y="44" text-anchor="middle" font-size="11" fill="#666">ループ内側の面積 = 1 サイクルで失うエネルギー（ヒステリシス損）</text>
+<text x="190" y="68" text-anchor="middle" font-size="13" font-weight="700" fill="#1565c0">珪素鋼板（従来）</text>
+<line x1="60" y1="200" x2="320" y2="200" stroke="#424242" stroke-width="1"/>
+<line x1="190" y1="80" x2="190" y2="320" stroke="#424242" stroke-width="1"/>
+<text x="318" y="216" text-anchor="end" font-size="10" fill="#666">H</text>
+<text x="200" y="92" text-anchor="start" font-size="10" fill="#666">B</text>
+<path d="M 90 256 Q 100 200 130 160 Q 170 100 250 110 Q 280 130 290 144 Q 280 200 250 240 Q 210 300 130 290 Q 100 270 90 256 Z" fill="#bbdefb" fill-opacity="0.5" stroke="#1565c0" stroke-width="2"/>
+<text x="190" y="338" text-anchor="middle" font-size="11" font-weight="700" fill="#0d47a1">面積大 → ヒステリシス損 大</text>
+<text x="190" y="354" text-anchor="middle" font-size="10" fill="#0d47a1">（基準 1.0）</text>
+<text x="570" y="68" text-anchor="middle" font-size="13" font-weight="700" fill="#2e7d32">アモルファス（非晶質）</text>
+<line x1="440" y1="200" x2="700" y2="200" stroke="#424242" stroke-width="1"/>
+<line x1="570" y1="80" x2="570" y2="320" stroke="#424242" stroke-width="1"/>
+<text x="698" y="216" text-anchor="end" font-size="10" fill="#666">H</text>
+<text x="580" y="92" text-anchor="start" font-size="10" fill="#666">B</text>
+<path d="M 530 230 Q 540 200 555 175 Q 580 120 620 115 Q 635 135 640 156 Q 635 200 620 225 Q 595 280 555 285 Q 540 270 530 230 Z" fill="#c8e6c9" fill-opacity="0.5" stroke="#2e7d32" stroke-width="2"/>
+<text x="570" y="338" text-anchor="middle" font-size="11" font-weight="700" fill="#1b5e20">面積小 → ヒステリシス損 約 1/3</text>
+<text x="570" y="354" text-anchor="middle" font-size="10" fill="#1b5e20">（細長く狭いループ）</text>
+<rect x="330" y="120" width="100" height="120" rx="8" fill="#fff8e1" stroke="#f57c00" stroke-width="1.5"/>
+<text x="380" y="140" text-anchor="middle" font-size="11" font-weight="700" fill="#bf360c">なぜ違う？</text>
+<text x="380" y="158" text-anchor="middle" font-size="9" fill="#bf360c">珪素鋼板：</text>
+<text x="380" y="172" text-anchor="middle" font-size="9" fill="#bf360c">結晶質で磁区</text>
+<text x="380" y="184" text-anchor="middle" font-size="9" fill="#bf360c">向き転換に</text>
+<text x="380" y="196" text-anchor="middle" font-size="9" fill="#bf360c">大きなエネルギー</text>
+<text x="380" y="216" text-anchor="middle" font-size="9" fill="#1b5e20">アモルファス：</text>
+<text x="380" y="228" text-anchor="middle" font-size="9" fill="#1b5e20">非晶質で容易</text>
+</svg></div>
+
+**読み解き**：左の青いループ（珪素鋼板）と右の緑のループ（アモルファス）。**ループの内側の面積がヒステリシス損 1 サイクルぶんに相当**。アモルファスは磁区構造が非晶質のため磁化方向の転換に要するエネルギーが小さく、ループが細長く狭くなる。結果、ヒステリシス損が約 1/3（実機では 1/3〜1/4 程度）。これに渦電流損の差（薄帯化で抑制）も加わり、鉄損総量で大幅な差が出る。
+
 #### トップランナー規制の経緯
 
 - **2002 年**：省エネ法（エネルギーの使用の合理化等に関する法律）にトップランナー方式導入
@@ -304,6 +337,57 @@ $$\text{単純回収年} = \frac{I}{\Delta W_{year} \times C} \quad [\text{年}]
 | 基準エネルギー消費効率 | — | 1,250 W |
 
 電圧・周波数は更新前後で同じ。電圧変動による無負荷損への影響は無視。
+
+#### 図解：R04下問12 解法フロー
+
+<div><svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-label="R04下問12の解法フローチャート">
+<defs>
+<filter id="shE" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity="0.15"/></filter>
+<linearGradient id="gCond" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fff9c4"/><stop offset="100%" stop-color="#fff176"/></linearGradient>
+<linearGradient id="gStepA" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bbdefb"/><stop offset="100%" stop-color="#90caf9"/></linearGradient>
+<linearGradient id="gStepB" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#c8e6c9"/><stop offset="100%" stop-color="#a5d6a7"/></linearGradient>
+<linearGradient id="gAns" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffe0b2"/><stop offset="100%" stop-color="#ffcc80"/></linearGradient>
+</defs>
+<text x="400" y="24" text-anchor="middle" font-size="15" font-weight="700" fill="#212121">R04下 問12 解法フロー（左：設問(a) ／ 右：設問(b)）</text>
+<rect x="60" y="48" width="680" height="56" rx="8" fill="url(#gCond)" stroke="#f9a825" stroke-width="1.5" filter="url(#shE)"/>
+<text x="400" y="68" text-anchor="middle" font-size="12" font-weight="700" fill="#bf8e00">▼ 共通条件</text>
+<text x="400" y="86" text-anchor="middle" font-size="11" fill="#5d4037">500 kV·A・旧 Wᵢ=500W／Wc=6700W・新 Wᵢ=150W／達成率140%・基準効率 1250W</text>
+<rect x="60" y="128" width="340" height="50" rx="8" fill="url(#gStepA)" stroke="#1565c0" stroke-width="1.5" filter="url(#shE)"/>
+<text x="230" y="148" text-anchor="middle" font-size="12" font-weight="700" fill="#0d47a1">設問 (a) — 更新後の負荷損 Wc'</text>
+<text x="230" y="166" text-anchor="middle" font-size="10" fill="#0d47a1">ステップ 1：達成率の定義式で逆算</text>
+<rect x="60" y="190" width="340" height="50" rx="6" fill="#e3f2fd" stroke="#1976d2" stroke-width="1"/>
+<text x="230" y="210" text-anchor="middle" font-size="10" font-weight="700" fill="#0d47a1">1250 / 1.40 = 892.86 W = Wᵢ + Wc40</text>
+<text x="230" y="226" text-anchor="middle" font-size="10" fill="#0d47a1">→ Wc40 = 892.86 − 150 = 742.86 W</text>
+<line x1="230" y1="240" x2="230" y2="260" stroke="#1565c0" stroke-width="2"/>
+<polygon points="225,258 235,258 230,268" fill="#1565c0"/>
+<rect x="60" y="270" width="340" height="50" rx="6" fill="#e3f2fd" stroke="#1976d2" stroke-width="1"/>
+<text x="230" y="290" text-anchor="middle" font-size="10" font-weight="700" fill="#0d47a1">ステップ 2：負荷率 40% の二乗で定格戻し</text>
+<text x="230" y="306" text-anchor="middle" font-size="10" fill="#0d47a1">Wc,full' = 742.86 / 0.16 ≈ 4,643 W</text>
+<rect x="60" y="332" width="340" height="60" rx="8" fill="url(#gAns)" stroke="#e65100" stroke-width="2" filter="url(#shE)"/>
+<text x="230" y="356" text-anchor="middle" font-size="13" font-weight="700" fill="#bf360c">▶ 正答 (a)：(5) 4,640 W</text>
+<text x="230" y="376" text-anchor="middle" font-size="10" fill="#bf360c">罠：負荷率 40% 評価を忘れない（×0.16）</text>
+<rect x="420" y="128" width="320" height="50" rx="8" fill="url(#gStepB)" stroke="#2e7d32" stroke-width="1.5" filter="url(#shE)"/>
+<text x="580" y="148" text-anchor="middle" font-size="12" font-weight="700" fill="#1b5e20">設問 (b) — 損失比率 W₂/W₁</text>
+<text x="580" y="166" text-anchor="middle" font-size="10" fill="#1b5e20">ステップ 1：300 kW を皮相に変換</text>
+<rect x="420" y="190" width="320" height="50" rx="6" fill="#e8f5e9" stroke="#388e3c" stroke-width="1"/>
+<text x="580" y="210" text-anchor="middle" font-size="10" font-weight="700" fill="#1b5e20">S = 300 / 0.8 = 375 kV·A</text>
+<text x="580" y="226" text-anchor="middle" font-size="10" fill="#1b5e20">→ α = 375 / 500 = 0.75（罠①：kW で割らない）</text>
+<line x1="580" y1="240" x2="580" y2="260" stroke="#2e7d32" stroke-width="2"/>
+<polygon points="575,258 585,258 580,268" fill="#2e7d32"/>
+<rect x="420" y="270" width="320" height="50" rx="6" fill="#e8f5e9" stroke="#388e3c" stroke-width="1"/>
+<text x="580" y="290" text-anchor="middle" font-size="10" font-weight="700" fill="#1b5e20">ステップ 2：W = Wᵢ + α²·Wc,full</text>
+<text x="580" y="306" text-anchor="middle" font-size="10" fill="#1b5e20">W₁ = 500 + 0.5625×6700 = 4,269 W</text>
+<rect x="420" y="332" width="320" height="60" rx="8" fill="url(#gAns)" stroke="#e65100" stroke-width="2" filter="url(#shE)"/>
+<text x="580" y="350" text-anchor="middle" font-size="11" font-weight="700" fill="#bf360c">W₂ = 150 + 0.5625×4640 = 2,760 W</text>
+<text x="580" y="368" text-anchor="middle" font-size="13" font-weight="700" fill="#bf360c">▶ 正答 (b)：W₂/W₁ ≈ 64.7% → (3) 65%</text>
+<text x="580" y="384" text-anchor="middle" font-size="9" fill="#bf360c">罠②：銅損は α² 比例（×0.5625）</text>
+<line x1="230" y1="104" x2="230" y2="128" stroke="#f9a825" stroke-width="2"/>
+<polygon points="225,126 235,126 230,134" fill="#f9a825"/>
+<line x1="580" y1="104" x2="580" y2="128" stroke="#f9a825" stroke-width="2"/>
+<polygon points="575,126 585,126 580,134" fill="#f9a825"/>
+</svg></div>
+
+**読み解き**：左ルートが (a) の解法、右ルートが (b) の解法。共通条件（黄色）からそれぞれ 2 ステップで橙色の正答ボックスに到達する。**両ルートの罠**：(a) は「負荷率 40 % 評価」を忘れない（×0.16）、(b) は「皮相基準で負荷率算定」して「銅損は $\alpha^2$ 比例」（×0.5625）。
 
 ### 設問 (a)：更新後の負荷損（定格通電時）
 

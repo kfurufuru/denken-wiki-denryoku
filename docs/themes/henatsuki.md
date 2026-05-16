@@ -194,6 +194,46 @@ $$P_c = I^2 R \quad \propto \text{（負荷率）}^2$$
 !!! note "鉄損が「負荷によらず一定」な理由"
     鉄損はヒステリシス損（磁区の向き転換に必要なエネルギー）と渦電流損（鉄心内を循環する誘導電流の損失）の和。どちらも「磁束密度の変化」によって決まり、磁束密度は印加電圧と周波数で決まる（ファラデーの法則: $e = N \cdot d\phi/dt$）。負荷電流が変わっても一次電圧がほぼ一定に保たれる限り、磁束密度は変わらず鉄損も変わらない。これが「無負荷損」とも呼ばれる理由。
 
+#### 図解：鉄損・銅損・合計損失の負荷率依存性
+
+<div><svg viewBox="0 0 760 380" xmlns="http://www.w3.org/2000/svg" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-label="鉄損・銅損・合計損失の負荷率依存性グラフ">
+<text x="380" y="24" text-anchor="middle" font-size="15" font-weight="700" fill="#212121">負荷率と各損失の関係（鉄損は水平・銅損は放物線・合計はU字）</text>
+<text x="380" y="44" text-anchor="middle" font-size="11" fill="#666">例：鉄損 Pᵢ=400 W・定格銅損 Pc,full=1600 W → 最大効率点 αₘ=√(400/1600)=0.5</text>
+<line x1="80" y1="320" x2="680" y2="320" stroke="#424242" stroke-width="1.5"/>
+<line x1="80" y1="60" x2="80" y2="320" stroke="#424242" stroke-width="1.5"/>
+<text x="80" y="340" text-anchor="middle" font-size="11" fill="#424242">0</text>
+<text x="200" y="340" text-anchor="middle" font-size="11" fill="#424242">0.25</text>
+<text x="320" y="340" text-anchor="middle" font-size="11" fill="#424242">0.5</text>
+<text x="440" y="340" text-anchor="middle" font-size="11" fill="#424242">0.75</text>
+<text x="560" y="340" text-anchor="middle" font-size="11" fill="#424242">1.0</text>
+<text x="680" y="340" text-anchor="middle" font-size="11" fill="#424242">1.2</text>
+<text x="380" y="370" text-anchor="middle" font-size="12" font-weight="700" fill="#424242">負荷率 α</text>
+<text x="62" y="82" text-anchor="end" font-size="11" fill="#424242">2400</text>
+<text x="62" y="146" text-anchor="end" font-size="11" fill="#424242">1600</text>
+<text x="62" y="210" text-anchor="end" font-size="11" fill="#424242">800</text>
+<text x="62" y="274" text-anchor="end" font-size="11" fill="#424242">400</text>
+<text x="62" y="320" text-anchor="end" font-size="11" fill="#424242">0</text>
+<text x="32" y="190" text-anchor="middle" font-size="12" font-weight="700" fill="#424242" transform="rotate(-90 32 190)">損失 [W]</text>
+<line x1="80" y1="274" x2="680" y2="274" stroke="#d32f2f" stroke-width="2.5" stroke-dasharray="6,3"/>
+<text x="685" y="270" text-anchor="start" font-size="11" font-weight="700" fill="#d32f2f">鉄損 Pᵢ=400W</text>
+<text x="685" y="284" text-anchor="start" font-size="10" fill="#d32f2f">（一定）</text>
+<path d="M 80 320 Q 200 314 320 274 T 560 146 Q 620 110 680 84" fill="none" stroke="#2e7d32" stroke-width="2.5"/>
+<text x="585" y="200" text-anchor="middle" font-size="11" font-weight="700" fill="#2e7d32">銅損 Pc = α²·1600W</text>
+<text x="585" y="216" text-anchor="middle" font-size="10" fill="#2e7d32">（放物線・負荷率²比例）</text>
+<path d="M 80 274 Q 200 270 320 210 T 560 64 Q 605 36 645 16" fill="none" stroke="#1565c0" stroke-width="3"/>
+<text x="160" y="100" text-anchor="start" font-size="12" font-weight="700" fill="#1565c0">合計損失 Pᵢ + α²·Pc,full</text>
+<text x="160" y="116" text-anchor="start" font-size="10" fill="#1565c0">（U字曲線）</text>
+<circle cx="320" cy="274" r="6" fill="#fb8c00" stroke="#bf360c" stroke-width="2"/>
+<line x1="320" y1="274" x2="320" y2="320" stroke="#bf8800" stroke-width="1" stroke-dasharray="3,2"/>
+<text x="320" y="356" text-anchor="middle" font-size="11" font-weight="700" fill="#bf360c">αₘ=0.5</text>
+<rect x="350" y="232" width="200" height="58" rx="6" fill="#fff8e1" stroke="#f57c00" stroke-width="1.5"/>
+<text x="450" y="252" text-anchor="middle" font-size="11" font-weight="700" fill="#bf360c">▼ 最大効率点</text>
+<text x="450" y="268" text-anchor="middle" font-size="10" fill="#bf360c">鉄損 = 銅損 = 400 W</text>
+<text x="450" y="282" text-anchor="middle" font-size="10" fill="#bf360c">合計損失最小（傾き0）</text>
+</svg></div>
+
+**読み解き**：赤の点線（鉄損）は水平 — 負荷率に依存せず常に 400 W。緑の放物線（銅損）は $\alpha^2$ で増加 — 負荷率 0.5 で 400 W、定格 1.0 で 1600 W。青の U 字（合計損失）は両者の和で、**鉄損と銅損が交差する点 $\alpha_m = \sqrt{P_i/P_{c,full}} = 0.5$ で最小** ＝最大効率点。これが「鉄損＝銅損で効率最大」の幾何学的意味。
+
 #### 効率の計算
 
 !!! note "定格表記の規約（重要）"
@@ -225,6 +265,43 @@ $$\alpha_m = \sqrt{\frac{P_i}{P_{c,full}}}$$
 
 !!! note "「鉄損＝銅損で効率最大」の数学的根拠"
     効率式を負荷率 α で微分して極値を求める。$\eta(\alpha) \propto \alpha S_n \cos\theta /(\alpha S_n \cos\theta + P_i + \alpha^2 P_{c,full})$。$d\eta/d\alpha = 0$ を解くと条件 $P_i = \alpha^2 P_{c,full}$ が得られる。直感的には「固定損（鉄損）= 変動損（銅損）」のときに全損失に対する出力割合が最大になる。これは最適化問題の一般解で「固定コストと可変コストが等しいとき単位あたりコストが最小」と同じ構造。
+
+#### 図解：効率カーブ（負荷率 α × 効率 η の山型）
+
+<div><svg viewBox="0 0 760 360" xmlns="http://www.w3.org/2000/svg" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-label="効率カーブ：負荷率と効率の関係">
+<text x="380" y="24" text-anchor="middle" font-size="15" font-weight="700" fill="#212121">効率カーブ（最大効率点で山型・両端で低下）</text>
+<text x="380" y="44" text-anchor="middle" font-size="11" fill="#666">例：定格容量 10 kV·A・力率 1.0・Pᵢ=400 W・Pc,full=1600 W</text>
+<line x1="80" y1="300" x2="680" y2="300" stroke="#424242" stroke-width="1.5"/>
+<line x1="80" y1="60" x2="80" y2="300" stroke="#424242" stroke-width="1.5"/>
+<text x="80" y="320" text-anchor="middle" font-size="11" fill="#424242">0</text>
+<text x="200" y="320" text-anchor="middle" font-size="11" fill="#424242">0.25</text>
+<text x="320" y="320" text-anchor="middle" font-size="11" fill="#424242">0.5</text>
+<text x="440" y="320" text-anchor="middle" font-size="11" fill="#424242">0.75</text>
+<text x="560" y="320" text-anchor="middle" font-size="11" fill="#424242">1.0</text>
+<text x="680" y="320" text-anchor="middle" font-size="11" fill="#424242">1.2</text>
+<text x="380" y="345" text-anchor="middle" font-size="12" font-weight="700" fill="#424242">負荷率 α</text>
+<text x="62" y="82" text-anchor="end" font-size="11" fill="#424242">100%</text>
+<text x="62" y="142" text-anchor="end" font-size="11" fill="#424242">90%</text>
+<text x="62" y="202" text-anchor="end" font-size="11" fill="#424242">80%</text>
+<text x="62" y="262" text-anchor="end" font-size="11" fill="#424242">70%</text>
+<text x="62" y="300" text-anchor="end" font-size="11" fill="#424242">60%</text>
+<text x="32" y="180" text-anchor="middle" font-size="12" font-weight="700" fill="#424242" transform="rotate(-90 32 180)">効率 η [%]</text>
+<path d="M 80 296 Q 130 240 200 180 Q 260 130 320 116 Q 380 130 440 160 Q 500 190 560 210 Q 620 224 680 234" fill="none" stroke="#1565c0" stroke-width="3"/>
+<circle cx="320" cy="116" r="7" fill="#fb8c00" stroke="#bf360c" stroke-width="2.5"/>
+<line x1="320" y1="116" x2="320" y2="300" stroke="#bf8800" stroke-width="1" stroke-dasharray="3,2"/>
+<text x="320" y="106" text-anchor="middle" font-size="11" font-weight="700" fill="#bf360c">最大効率 ηmax≈93.4%</text>
+<text x="320" y="336" text-anchor="middle" font-size="11" font-weight="700" fill="#bf360c">αₘ=0.5</text>
+<rect x="430" y="80" width="240" height="78" rx="6" fill="#e3f2fd" stroke="#1976d2" stroke-width="1.2"/>
+<text x="550" y="100" text-anchor="middle" font-size="11" font-weight="700" fill="#0d47a1">▼ 最大効率の位置の出し方</text>
+<text x="550" y="118" text-anchor="middle" font-size="10" fill="#0d47a1">αₘ = √(Pᵢ/Pc,full) = √(400/1600) = 0.5</text>
+<text x="550" y="134" text-anchor="middle" font-size="10" fill="#0d47a1">ηmax 分母 = αₘSₙcosθ + 2Pᵢ</text>
+<text x="550" y="150" text-anchor="middle" font-size="10" fill="#0d47a1">= 5000 + 800 = 5800 → 93.4%</text>
+<circle cx="560" cy="210" r="5" fill="#7b1fa2" stroke="#4a148c" stroke-width="1.5"/>
+<text x="560" y="225" text-anchor="middle" font-size="10" font-weight="700" fill="#4a148c">定格点 η≈83.3%</text>
+<text x="560" y="240" text-anchor="middle" font-size="10" fill="#4a148c">（鉄損+銅損=2000W）</text>
+</svg></div>
+
+**読み解き**：青の山型カーブが効率 $\eta(\alpha)$。$\alpha = 0.5$ で頂点（**最大効率 93.4 %**）に達し、軽負荷でも過負荷でも効率は低下する。最大効率点は §B 図の「鉄損＝銅損の交点」と同じ位置で、$\alpha_m = \sqrt{P_i/P_{c,full}}$。定格点（$\alpha=1.0$）の効率は鉄損 + 定格銅損 = 2000 W で 83.3 % と、最大効率点より低い。
 
 !!! tip "🔗 次のステップ：損失深掘りページへ"
     鉄損・銅損・効率の **瞬時的な基本** が理解できたら、次は
@@ -323,6 +400,46 @@ $$\varepsilon = 2 \times 0.8 + 4 \times 0.6 = 1.6 + 2.4 = 4.0\%$$
 
 !!! tip "初学者向け：%Z 違いの直感"
     「2 台の井戸を並列につないで水を汲み上げる」イメージ。井戸 A（%Z 4 %）は抵抗が小さく水（電流）が流れやすい、井戸 B（%Z 6 %）は抵抗が大きく流れにくい → 結果、A 側に水が集中して A だけ先に枯れる（過負荷）。**容量比ではなく %Z 比**で負荷が決まる、と覚える。
+
+#### 図解：%Z が違う 2 台の負荷分担
+
+<div><svg viewBox="0 0 760 340" xmlns="http://www.w3.org/2000/svg" width="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-label="並行運転で%Zが違う2台の負荷分担">
+<defs>
+<filter id="shC" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity="0.18"/></filter>
+<linearGradient id="gA" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffcdd2"/><stop offset="100%" stop-color="#ef9a9a"/></linearGradient>
+<linearGradient id="gB" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#bbdefb"/><stop offset="100%" stop-color="#90caf9"/></linearGradient>
+</defs>
+<text x="380" y="24" text-anchor="middle" font-size="15" font-weight="700" fill="#212121">同容量で %Z が違うと負荷分担が偏る（A 過負荷リスク）</text>
+<text x="380" y="44" text-anchor="middle" font-size="11" fill="#666">変圧器 A：容量 100 kV·A・%Z=4 % ／ 変圧器 B：容量 100 kV·A・%Z=6 %</text>
+<rect x="270" y="68" width="220" height="40" rx="6" fill="#fffde7" stroke="#fbc02d" stroke-width="1.5" filter="url(#shC)"/>
+<text x="380" y="92" text-anchor="middle" font-size="12" font-weight="700" fill="#bf8e00">共通母線（高圧側）負荷電流 I=100 A</text>
+<line x1="320" y1="108" x2="220" y2="160" stroke="#d32f2f" stroke-width="6"/>
+<polygon points="218,160 230,154 226,166" fill="#d32f2f"/>
+<text x="245" y="135" text-anchor="middle" font-size="11" font-weight="700" fill="#bf360c">I_A=60 A</text>
+<text x="245" y="150" text-anchor="middle" font-size="10" fill="#bf360c">（6 割）</text>
+<line x1="440" y1="108" x2="540" y2="160" stroke="#1976d2" stroke-width="3"/>
+<polygon points="542,160 530,154 534,166" fill="#1976d2"/>
+<text x="515" y="135" text-anchor="middle" font-size="11" font-weight="700" fill="#0d47a1">I_B=40 A</text>
+<text x="515" y="150" text-anchor="middle" font-size="10" fill="#0d47a1">（4 割）</text>
+<rect x="120" y="160" width="200" height="120" rx="8" fill="url(#gA)" stroke="#c62828" stroke-width="2" filter="url(#shC)"/>
+<text x="220" y="184" text-anchor="middle" font-size="14" font-weight="700" fill="#b71c1c">変圧器 A</text>
+<text x="220" y="204" text-anchor="middle" font-size="11" font-weight="700" fill="#b71c1c">容量 100 kV·A</text>
+<text x="220" y="222" text-anchor="middle" font-size="11" font-weight="700" fill="#b71c1c">%Z = 4 %（小さい）</text>
+<line x1="140" y1="232" x2="300" y2="232" stroke="#c62828" stroke-width="0.8"/>
+<text x="220" y="252" text-anchor="middle" font-size="12" font-weight="700" fill="#b71c1c">分担 60 % ＝ 60 kV·A</text>
+<text x="220" y="270" text-anchor="middle" font-size="10" font-weight="700" fill="#b71c1c">▲ 容量比は 1:1 なのに偏る</text>
+<rect x="440" y="160" width="200" height="120" rx="8" fill="url(#gB)" stroke="#1565c0" stroke-width="2" filter="url(#shC)"/>
+<text x="540" y="184" text-anchor="middle" font-size="14" font-weight="700" fill="#0d47a1">変圧器 B</text>
+<text x="540" y="204" text-anchor="middle" font-size="11" font-weight="700" fill="#0d47a1">容量 100 kV·A</text>
+<text x="540" y="222" text-anchor="middle" font-size="11" font-weight="700" fill="#0d47a1">%Z = 6 %（大きい）</text>
+<line x1="460" y1="232" x2="620" y2="232" stroke="#0d47a1" stroke-width="0.8"/>
+<text x="540" y="252" text-anchor="middle" font-size="12" font-weight="700" fill="#0d47a1">分担 40 % ＝ 40 kV·A</text>
+<text x="540" y="270" text-anchor="middle" font-size="10" fill="#0d47a1">▼ 余裕あり（軽負荷）</text>
+<rect x="40" y="296" width="680" height="34" rx="4" fill="#fafafa" stroke="#bdbdbd" stroke-width="0.8"/>
+<text x="380" y="316" text-anchor="middle" font-size="11" font-weight="700" fill="#424242">分担比 = (1/%Z) の比 → A:B = (1/4):(1/6) = 6:4 → A が 60 A・B が 40 A</text>
+</svg></div>
+
+**読み解き**：負荷電流 100 A を 2 台で分担するが、**%Z が小さい A 側に電流が偏る**（6:4 分担）。容量比は 1:1 なのに分担比が崩れるため、A が定格を超える可能性。これが「容量比どおりに分担されない」の正体。式で書くと **分担比 ∝ 1/%Z**。
 
 ---
 
