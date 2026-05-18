@@ -89,7 +89,9 @@ nav:
       - 変圧器（基礎ハブ）: themes/henatsuki.md
       - 変圧器損失・効率（深掘り）: themes/henatsuki-loss.md
       - 計器用変成器（VT・CT）: themes/keiki-hensei.md
-      - 開閉装置・保護継電器: themes/kaihei-hogo.md
+      - 遮断器・断路器（CB・DS）: themes/shadanki.md
+      - 保護継電器: themes/hogo-keiden.md
+      - 開閉装置・保護継電器（hub）: themes/kaihei-hogo.md
     - 送電:
       - themes/souden/index.md
       - 架空送電線路: themes/kakuu-souden.md

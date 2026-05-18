@@ -386,7 +386,9 @@ $$V_1 = V_2 \times K_v \quad\text{（例: 二次計器が 100 V・変圧比 6600
 
 ## 関連ページ
 
-- [開閉装置・保護継電器](kaihei-hogo.md) — CT・VT 出力を入力とする OCR / DGR / 87 / 21 の整定・動作論
+- [保護継電器](hogo-keiden.md) — CT・VT 出力を入力とする OCR / DGR / 87 / 21 の整定・動作論
+- [遮断器・断路器（CB・DS）](shadanki.md) — 継電器のトリップ指令を受ける実行側
+- [開閉装置・保護継電器（hub）](kaihei-hogo.md) — 3 ページの全体俯瞰・出題実績インデックス
 - [変圧器](henatsuki.md) — CT・VT の電磁原理（巻数比・励磁電流・磁気飽和）の母体
 - [架空送電線路](kakuu-souden.md) — 距離継電器・差動継電器が監視する送電線側
 - [頻出計算パターン集](../reference/calc-patterns.md) — 変流比・残留回路の計算手順
