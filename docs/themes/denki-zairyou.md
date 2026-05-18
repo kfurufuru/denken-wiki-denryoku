@@ -213,6 +213,6 @@ ACSR（Aluminum Conductor Steel Reinforced）の断面:
 
 ## 関連ページ
 
-- [架空送電線路](kukusouden.md) — ACSRの架空送電線への適用、電線の種類
+- [架空送電線路](kakuu-souden.md) — ACSRの架空送電線への適用、電線の種類
 - [地中送電・電力ケーブル](chichuu-souden.md) — XLPE・CVケーブルの絶縁材料詳細
 - [開閉装置・保護継電器](kaihei-hogo.md) — SF₆ガスのGIS適用

@@ -33,7 +33,7 @@
 
     変圧器・調相設備・保護継電器。損失計算・効率が頻出。
 
-    代表テーマ: [変圧器](themes/henatsuki.md) / [保護継電器](themes/hogo-kiden.md)
+    代表テーマ: [変圧器](themes/henatsuki.md) / [保護継電器](themes/hogo-keiden.md)
 
 - 🗼 **[送電](themes/index.md#送電)**
 
@@ -49,7 +49,7 @@
 
     配電方式・電圧降下・力率改善。出題数 **No.1 85問**。最優先。
 
-    代表テーマ: [配電線路](themes/haiden.md) / [需要・負荷](themes/juyoku.md)
+    代表テーマ: [配電線路](themes/haiden.md) / [頻出計算パターン集](reference/calc-patterns.md)
 
 </div>
 

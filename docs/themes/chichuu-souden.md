@@ -212,5 +212,5 @@ $$I_c = 314 \times 2 \times 10^{-6} \times 38{,}105 \approx 23.9 \text{ A}$$
 
 ## 関連ページ
 
-- [架空送電線路](kukusouden.md) — L・C特性の比較基準、フェランチ効果の比較元
+- [架空送電線路](kakuu-souden.md) — L・C特性の比較基準、フェランチ効果の比較元
 - [電気材料](denki-zairyou.md) — XLPE・浸油紙など絶縁材料の詳細
