@@ -99,6 +99,7 @@ nav:
     - 配電:
       - themes/haiden-group/index.md
       - 配電線路: themes/haiden.md
+      - 自家用受電設備の地絡保護: themes/jikayou-chiraku.md
     - その他:
       - themes/sonota/index.md
       - 電気材料: themes/denki-zairyou.md
