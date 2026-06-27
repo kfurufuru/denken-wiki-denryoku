@@ -1,9 +1,3 @@
-<script>window.location.replace("https://kfurufuru.github.io/secretary-portal-public/denken3-denryoku-wiki.html" + window.location.hash);</script>
-<meta http-equiv="refresh" content="0; url=https://kfurufuru.github.io/secretary-portal-public/denken3-denryoku-wiki.html">
-
-!!! info "新・電力Wiki（SPA版）へ移行しました"
-    本ページは自動的に [新・電力Wiki（SPA版）](https://kfurufuru.github.io/secretary-portal-public/denken3-denryoku-wiki.html) へ転送されます。転送されない場合は左記リンクから。過去問マッピング・攻略戦略・リファレンスは当面この旧サイトにも残っています。
-
 # 電験3種 電力Wiki
 
 > 電力科目 — 設備×公式×過去問クロスリファレンス
