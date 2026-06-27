@@ -315,7 +315,7 @@ P_a / P_b = (P_n_a / %Z_a) / (P_n_b / %Z_b)
 
 ## 関連ページ
 
-- [B問題得点戦略](../strategy/b-mondai-strategy.md) — 時間配分・捨て問基準
+- [B問題得点戦略](../strategy/b-mondai-strategy.md) — 時間配分・後回し基準
 - [引っかけパターン集](../strategy/trap-patterns.md) — 計算ミスを誘う落とし穴
 - [頻出数値暗記シート](numbers.md) — 公式に使う数値の確認
 - [波形分析・出題周期](../kakomon/wave-analysis.md) — R08 予測根拠
