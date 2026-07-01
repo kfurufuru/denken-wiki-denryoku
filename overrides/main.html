@@ -1,14 +1,66 @@
 {% extends "base.html" %}
 
 {% block announce %}
+  {#- ページ単位の移行状態バッジ。src_uri を新SPAのアンカーへ写像し、移行済みページだけ「✓ このページは移行済み」＋該当ページへのdeep linkを出す。未収録ページ（versioning 等）は移行済みと言わず旧版のみと明示する。 -#}
+  {% set src = page.file.src_uri if page and page.file else "" %}
+  {% set migrated = {
+      "index.md": "home",
+      "themes/index.md": "home",
+      "themes/hatsuden/index.md": "home",
+      "themes/henden/index.md": "home",
+      "themes/souden/index.md": "home",
+      "themes/haiden-group/index.md": "home",
+      "themes/sonota/index.md": "home",
+      "kakomon/index.md": "home",
+      "strategy/index.md": "home",
+      "reference/index.md": "home",
+      "themes/suiryoku.md": "suiryoku",
+      "themes/karyoku.md": "karyoku",
+      "themes/genshiryoku.md": "genshiryoku",
+      "themes/shin-energy.md": "shin-energy",
+      "themes/henatsuki.md": "henatsuki",
+      "themes/henatsuki-loss.md": "henatsuki-loss",
+      "themes/keiki-hensei.md": "keiki-hensei",
+      "themes/shadanki.md": "shadanki",
+      "themes/hogo-keiden.md": "hogo-keiden",
+      "themes/kaihei-hogo.md": "kaihei-hogo",
+      "themes/kakuu-souden.md": "kakuu-souden",
+      "themes/chichuu-souden.md": "chichuu-souden",
+      "themes/haiden.md": "haiden",
+      "themes/jikayou-chiraku.md": "jikayou-chiraku",
+      "themes/denki-zairyou.md": "denki-zairyou",
+      "themes/denryoku-keitou.md": "denryoku-keitou",
+      "kakomon/by-year.md": "kakomon-by-year",
+      "kakomon/by-field.md": "kakomon-by-field",
+      "kakomon/wave-analysis.md": "kakomon-wave",
+      "strategy/last-3days-checklist.md": "strategy-last3days",
+      "strategy/b-mondai-strategy.md": "strategy-bmondai",
+      "strategy/trap-patterns.md": "strategy-traps",
+      "reference/calc-patterns.md": "calc-patterns",
+      "reference/numbers.md": "numbers",
+      "reference/glossary.md": "glossary",
+      "reference/emoji-legend.md": "emoji-legend"
+  } %}
+  {% set anchor = migrated[src] if src in migrated else "" %}
+  {% set spa = "https://kfurufuru.github.io/secretary-portal-public/denken3-denryoku-wiki.html" %}
   <div style="display:flex; gap:10px; align-items:center; justify-content:center; flex-wrap:wrap; padding:5px 0 3px; border-bottom:1px solid rgba(255,255,255,0.18); margin-bottom:4px;">
-    <span style="font-weight:700; color:#fff; font-size:0.86rem;">✓ この電力Wikiは新Wikiへ移行済みです</span>
-    <a href="https://kfurufuru.github.io/secretary-portal-public/denken3-denryoku-wiki.html"
-       style="font-weight:700; color:#fff; text-decoration:none; background:rgba(255,255,255,0.24); border:1px solid rgba(255,255,255,0.55); border-radius:4px; padding:2px 12px; font-size:0.86rem;"
-       onmouseover="this.style.background='rgba(255,255,255,0.38)'" onmouseout="this.style.background='rgba(255,255,255,0.24)'">
-      ⚡ 新・電力Wikiを開く →
-    </a>
-    <span style="font-size:0.76rem; color:rgba(255,255,255,0.65);">（このページは引き続き閲覧できます）</span>
+    {% if anchor %}
+      <span style="font-weight:700; color:#fff; font-size:0.86rem;">✓ このページは新Wikiへ移行済みです</span>
+      <a href="{{ spa }}#{{ anchor }}"
+         style="font-weight:700; color:#fff; text-decoration:none; background:rgba(255,255,255,0.24); border:1px solid rgba(255,255,255,0.55); border-radius:4px; padding:2px 12px; font-size:0.86rem;"
+         onmouseover="this.style.background='rgba(255,255,255,0.38)'" onmouseout="this.style.background='rgba(255,255,255,0.24)'">
+        ⚡ 新Wikiでこのページを開く →
+      </a>
+      <span style="font-size:0.76rem; color:rgba(255,255,255,0.65);">（このページも引き続き閲覧できます）</span>
+    {% else %}
+      <span style="font-weight:700; color:#fff; font-size:0.86rem;">この電力Wikiは新Wikiへ移行しました</span>
+      <span style="font-size:0.76rem; color:rgba(255,255,255,0.72);">※このページは旧版のみ（新Wiki未収録・引き続き閲覧できます）</span>
+      <a href="{{ spa }}"
+         style="font-weight:700; color:#fff; text-decoration:none; background:rgba(255,255,255,0.24); border:1px solid rgba(255,255,255,0.55); border-radius:4px; padding:2px 12px; font-size:0.86rem;"
+         onmouseover="this.style.background='rgba(255,255,255,0.38)'" onmouseout="this.style.background='rgba(255,255,255,0.24)'">
+        ⚡ 新・電力Wikiを開く →
+      </a>
+    {% endif %}
   </div>
   <div style="display:flex; gap:8px; align-items:center; justify-content:center; flex-wrap:wrap; padding:2px 0;">
     <a href="https://kfurufuru.github.io/secretary-portal-public/" style="font-weight:600; color:#fff; text-decoration:none; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.2); border-radius:4px; padding:2px 10px; font-size:0.82rem;" onmouseover="this.style.background='rgba(255,255,255,0.2)'" onmouseout="this.style.background='rgba(255,255,255,0.08)'">← ポータル</a>
