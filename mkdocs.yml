@@ -33,6 +33,13 @@ theme:
     - content.code.copy
     - announce.dismiss
 
+validation:
+  omitted_files: warn
+  links:
+    not_found: warn
+    anchors: warn
+    unrecognized_links: warn
+
 plugins:
   - search:
       lang: ja

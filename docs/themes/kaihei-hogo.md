@@ -71,11 +71,11 @@ graph LR
 
 | 論点 | 出題頻度 | 該当ページ |
 |---|---|---|
-| CT 二次開放禁止 | ★★★ | [計器用変成器 §5](keiki-hensei.md#5) |
-| DS→CB の操作順序 | ★★★ | [遮断器 §1](shadanki.md#1) |
-| GIS の絶縁媒体 = SF₆ | ★★★ | [遮断器 §5](shadanki.md#5) |
-| DGR は方向も判定 | ★★☆ | [保護継電器 §4](hogo-keiden.md#4) |
-| 差動継電器（87）の保護範囲 | ★★☆ | [保護継電器 §4](hogo-keiden.md#4) |
+| CT 二次開放禁止 | ★★★ | [計器用変成器 §5](keiki-hensei.md#patterns) |
+| DS→CB の操作順序 | ★★★ | [遮断器 §1](shadanki.md#intuition) |
+| GIS の絶縁媒体 = SF₆ | ★★★ | [遮断器 §5](shadanki.md#gis) |
+| DGR は方向も判定 | ★★☆ | [保護継電器 §4](hogo-keiden.md#characteristics) |
+| 差動継電器（87）の保護範囲 | ★★☆ | [保護継電器 §4](hogo-keiden.md#characteristics) |
 
 ---
 
@@ -83,20 +83,20 @@ graph LR
 
 | 年度 | 問 | 出題内容 | 該当ページ |
 |------|---|---------|---------|
-| R07下 | 問8 | 変電所の機器に関する記述 | [遮断器](shadanki.md#8) |
-| R07上 | 問8 | 変電所の遮断器・断路器・保護継電器 | [遮断器](shadanki.md#8) ＋ [保護継電器](hogo-keiden.md) |
-| R06下 | 問8 | 変電所における遮断器の種類と特徴 | [遮断器](shadanki.md#8) |
-| **R06下** | **問7** | **計器用変成器の取扱い上の注意点** | **[計器用変成器](keiki-hensei.md#8)** |
-| R06上 | 問8 | 保護継電器の種類と用途 | [保護継電器](hogo-keiden.md#8) |
-| R05下 | 問8 | GIS に使用される断路器と遮断器の操作順序 | [遮断器](shadanki.md#8) |
-| R05上 | 問8 | 変電所で使用する機器の特徴 | [遮断器](shadanki.md#8) |
-| **R05上** | **問7** | **変電所の計器用変成器** | **[計器用変成器](keiki-hensei.md#8)** |
-| R04下 | 問8 | CT と VT の特徴と二次側開放禁止 | [計器用変成器](keiki-hensei.md#8)（センサー） |
-| R04上 | 問8 | 距離継電器と差動継電器の動作原理 | [保護継電器](hogo-keiden.md#8) |
-| R03 | 問8 | 真空遮断器と GIS（SF₆）の特徴比較 | [遮断器](shadanki.md#8) |
-| **R03** | **問7** | **変電所の計器用変成器** | **[計器用変成器](keiki-hensei.md#8)** |
-| R02 | 問8 | 開閉機器の種類と特徴 | [遮断器](shadanki.md#8) |
-| R01 | 問8 | 保護継電器（OCR）の動作時間（計算） | [保護継電器](hogo-keiden.md#8) |
+| R07下 | 問8 | 変電所の機器に関する記述 | [遮断器](shadanki.md#exam) |
+| R07上 | 問8 | 変電所の遮断器・断路器・保護継電器 | [遮断器](shadanki.md#exam) ＋ [保護継電器](hogo-keiden.md) |
+| R06下 | 問8 | 変電所における遮断器の種類と特徴 | [遮断器](shadanki.md#exam) |
+| **R06下** | **問7** | **計器用変成器の取扱い上の注意点** | **[計器用変成器](keiki-hensei.md#exam)** |
+| R06上 | 問8 | 保護継電器の種類と用途 | [保護継電器](hogo-keiden.md#exam) |
+| R05下 | 問8 | GIS に使用される断路器と遮断器の操作順序 | [遮断器](shadanki.md#exam) |
+| R05上 | 問8 | 変電所で使用する機器の特徴 | [遮断器](shadanki.md#exam) |
+| **R05上** | **問7** | **変電所の計器用変成器** | **[計器用変成器](keiki-hensei.md#exam)** |
+| R04下 | 問8 | CT と VT の特徴と二次側開放禁止 | [計器用変成器](keiki-hensei.md#exam)（センサー） |
+| R04上 | 問8 | 距離継電器と差動継電器の動作原理 | [保護継電器](hogo-keiden.md#exam) |
+| R03 | 問8 | 真空遮断器と GIS（SF₆）の特徴比較 | [遮断器](shadanki.md#exam) |
+| **R03** | **問7** | **変電所の計器用変成器** | **[計器用変成器](keiki-hensei.md#exam)** |
+| R02 | 問8 | 開閉機器の種類と特徴 | [遮断器](shadanki.md#exam) |
+| R01 | 問8 | 保護継電器（OCR）の動作時間（計算） | [保護継電器](hogo-keiden.md#exam) |
 
 > 詳細解説: [電験王 開閉・保護カテゴリ](https://denken-ou.com/denryoku/?cat=kaiheihogo)
 
