@@ -19,7 +19,7 @@
 
 <div class="grid cards" markdown>
 
-- ⚡ **[発電](themes/index.md#発電)**
+- ⚡ **[発電](themes/index.md#hatsuden)**
 
     ---
 
@@ -27,7 +27,7 @@
 
     代表テーマ: [水力発電](themes/suiryoku.md) / [火力発電](themes/karyoku.md)
 
-- 🔄 **[変電](themes/index.md#変電)**
+- 🔄 **[変電](themes/index.md#henden)**
 
     ---
 
@@ -35,7 +35,7 @@
 
     代表テーマ: [変圧器](themes/henatsuki.md) / [保護継電器](themes/hogo-keiden.md)
 
-- 🗼 **[送電](themes/index.md#送電)**
+- 🗼 **[送電](themes/index.md#souden)**
 
     ---
 
@@ -43,7 +43,7 @@
 
     代表テーマ: [架空送電線路](themes/kakuu-souden.md) / [地中電線路](themes/chichuu-souden.md)
 
-- 🔌 **[配電](themes/index.md#配電)**
+- 🔌 **[配電](themes/index.md#haiden)**
 
     ---
 
