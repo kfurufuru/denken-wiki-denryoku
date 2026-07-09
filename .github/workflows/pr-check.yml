@@ -1,0 +1,24 @@
+name: PR Build Check (strict)
+
+# PR時に mkdocs build --strict を実行し、リンク切れ・アンカー切れを
+# マージ前に検知する（deploy.yml は master への push 時のみ起動するため、
+# PR段階では検証されないギャップを埋める）。デプロイは行わない。
+
+on:
+  pull_request:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - run: pip install "mkdocs-material>=9.5" "mkdocs>=1.6"
+      - run: mkdocs build --strict
