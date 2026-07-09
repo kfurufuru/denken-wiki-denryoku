@@ -164,7 +164,9 @@ graph LR
 
 ### 基準値：U-235 1gが完全核分裂すると
 
-$$E = \frac{1 \times 10^{-3}}{235} \times 6.02 \times 10^{23} \times 3.2 \times 10^{-11} \approx 8.2 \times 10^{10} \,\mathrm{J}$$
+$$E = \frac{1}{235} \times 6.02 \times 10^{23} \times 3.2 \times 10^{-11} \approx 8.2 \times 10^{10} \,\mathrm{J}$$
+
+（1 g のU-235の原子数 = $\frac{1\,\mathrm{g}}{235\,\mathrm{g/mol}} \times 6.02\times10^{23} \approx 2.56\times10^{21}$ 個。これに1核分裂 $3.2\times10^{-11}$ J を掛ける）
 
 （質量欠損で計算しても同じ：$E = 1\times10^{-3} \times 0.0009 \times (3\times10^8)^2 \approx 8.1\times10^{10}$ J）
 
