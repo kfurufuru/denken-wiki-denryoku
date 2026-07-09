@@ -554,6 +554,8 @@ $$\text{単純回収年} = \frac{I}{\Delta W_{year} \times C} \quad [\text{年}]
 
 ## 10. 出題実績（損失・効率・更新経済性 関連） {#exam}
 
+> 📚 横断一覧: [分野別一覧（該当分野）](../kakomon/by-field.md#henden) ／ [年度別一覧](../kakomon/by-year.md)
+
 !!! note "論点別ソート（Interleaving 配慮）"
     変圧器の損失・効率を直接扱う出題を **鉄損／銅損／効率／全日効率／経済性** に分類して列挙。年度横断学習用。
 

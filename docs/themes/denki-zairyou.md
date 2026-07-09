@@ -189,6 +189,8 @@ ACSR（Aluminum Conductor Steel Reinforced）の断面:
 
 ## 📊 出題実績 {#exam}
 
+> 📚 横断一覧: [分野別一覧（該当分野）](../kakomon/by-field.md#denki-zairyou) ／ [年度別一覧](../kakomon/by-year.md)
+
 | 年度 | 問 | 出題内容 | 問題タイプ | 難易度 |
 |------|---|---------|----------|--------|
 | R07下 | 問14 | 磁性材料の種類と損失 | 論説 | ★★★☆☆ |
