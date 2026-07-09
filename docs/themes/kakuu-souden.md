@@ -258,7 +258,7 @@ Step 2: δ = ΔV / Vr × 100 [%]
 |------|------------|-------------------|
 | 三相3線式 | $\sqrt{3} I(R\cos\theta + X\sin\theta)$ | $3I^2R$ |
 | 単相2線式 | $2I(R\cos\theta + X\sin\theta)$ | $2I^2R$ |
-| 単相3線式 | $I(R\cos\theta + X\sin\theta)$（片側） | 電圧線2本分 |
+| 単相3線式 | $I(R\cos\theta + X\sin\theta)$（片側） | $2I^2R$（電圧線2本分。平衡負荷なら中性線電流0） |
 
 ---
 
