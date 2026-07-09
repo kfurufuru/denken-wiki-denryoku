@@ -1,7 +1,6 @@
 ---
 tags: [配電, 保護継電器, 自家用電気工作物, GR, DGR, ZCT, EVT, もらい事故, 波及事故, 高頻度]
 difficulty: ★★★
-version: v1.0
 related_themes: [保護継電器, 計器用変成器, 地中送電・電力ケーブル, 配電線路]
 ---
 

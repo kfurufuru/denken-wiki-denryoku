@@ -1,7 +1,6 @@
 ---
 tags: [材料, 電気材料]
 difficulty: ★★☆
-version: v1.0
 related_themes: [架空送電線路, 地中送電・電力ケーブル]
 ---
 

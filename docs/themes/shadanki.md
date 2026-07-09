@@ -1,7 +1,6 @@
 ---
 tags: [変電, 遮断器, 断路器, GIS, VCB, 操作順序, 高頻度]
 difficulty: ★★☆
-version: v1.0
 related_themes: [開閉装置・保護継電器, 保護継電器, 計器用変成器]
 ---
 

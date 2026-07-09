@@ -1,7 +1,6 @@
 ---
 tags: [送電, 地中送電]
 difficulty: ★★☆
-version: v1.0
 related_themes: [架空送電線路]
 ---
 

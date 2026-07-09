@@ -1,7 +1,6 @@
 ---
 tags: [配電, 配電方式, 電圧降下, 電力損失, 負荷指標, 高頻度]
 difficulty: ★★★
-version: v1.0
 related_themes: [架空送電線路, 変圧器]
 ---
 

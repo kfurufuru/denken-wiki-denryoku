@@ -1,7 +1,6 @@
 ---
 tags: [発電, 新エネルギー, 再生可能エネルギー]
 difficulty: ★★☆
-version: v1.0
 related_themes: [電力系統・需給運用, 火力発電]
 ---
 

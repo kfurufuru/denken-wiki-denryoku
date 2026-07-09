@@ -1,7 +1,6 @@
 ---
 tags: [発電, 原子力]
 difficulty: ★★☆
-version: v1.0
 related_themes: [火力発電]
 ---
 

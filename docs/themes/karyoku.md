@@ -1,7 +1,6 @@
 ---
 tags: [発電, 火力, 高頻度]
 difficulty: ★★☆
-version: v1.0
 related_themes: [水力発電, 原子力発電, 電力系統・需給運用]
 ---
 

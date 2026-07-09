@@ -1,7 +1,6 @@
 ---
 tags: [変電, 開閉装置, 保護継電器, 計器用変成器, hub]
 difficulty: ★★☆
-version: v2.0
 related_themes: [遮断器・断路器, 保護継電器, 計器用変成器, 変圧器]
 ---
 

@@ -1,7 +1,6 @@
 ---
 tags: [系統, 需給運用]
 difficulty: ★★☆
-version: v1.0
 related_themes: [配電線路, 架空送電線路, 新エネルギー発電]
 ---
 

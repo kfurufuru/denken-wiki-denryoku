@@ -1,7 +1,6 @@
 ---
 tags: [変電, 保護継電器, OCR, DGR, 差動継電器, 距離継電器, 定限時, 反限時, 高頻度]
 difficulty: ★★★
-version: v1.0
 related_themes: [遮断器・断路器, 計器用変成器, 開閉装置・保護継電器]
 ---
 

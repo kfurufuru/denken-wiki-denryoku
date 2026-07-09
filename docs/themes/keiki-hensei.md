@@ -1,7 +1,6 @@
 ---
 tags: [変電, 計器用変成器, VT, CT, 二次側開放禁止, 残留回路, 極性, 高頻度]
 difficulty: ★★☆
-version: v1.0
 related_themes: [開閉装置・保護継電器, 変圧器, 架空送電線路]
 ---
 
