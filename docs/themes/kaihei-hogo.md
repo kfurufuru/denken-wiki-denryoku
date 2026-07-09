@@ -96,7 +96,7 @@ graph LR
 | R03 | 問8 | 真空遮断器と GIS（SF₆）の特徴比較 | [遮断器](shadanki.md#8) |
 | **R03** | **問7** | **変電所の計器用変成器** | **[計器用変成器](keiki-hensei.md#8)** |
 | R02 | 問8 | 開閉機器の種類と特徴 | [遮断器](shadanki.md#8) |
-| R01 | 問8 | 保護継電器方式の種類 | [保護継電器](hogo-keiden.md#8) |
+| R01 | 問8 | 保護継電器（OCR）の動作時間（計算） | [保護継電器](hogo-keiden.md#8) |
 
 > 詳細解説: [電験王 開閉・保護カテゴリ](https://denken-ou.com/denryoku/?cat=kaiheihogo)
 

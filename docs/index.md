@@ -60,12 +60,12 @@
 | 順位 | テーマ | 出題数(22年分) | 優先度 |
 |------|--------|--------------|--------|
 | 1 | [配電線路](themes/haiden.md) | 85問 | 🔴 最優先 |
-| 2 | [架空送電線路](themes/kakuu-souden.md) | 68問 | 🔴 最優先 |
+| 2 | 送電（[架空](themes/kakuu-souden.md)＋[地中](themes/chichuu-souden.md)） | 68問 | 🔴 最優先 |
 | 3 | [火力発電](themes/karyoku.md) | 60問 | 🔴 最優先 |
-| 4 | [変圧器](themes/henatsuki.md) | 約27問 | 🔴 最優先 |
+| 4 | 変電（[変圧器](themes/henatsuki.md)・[開閉装置](themes/kaihei-hogo.md)） | 54問 | 🔴 最優先 |
 | 5 | [水力発電](themes/suiryoku.md) | 37問 | 🔴 最優先 |
 
-出典: 電験王（H18〜R7下期、22年分）
+出題数はH18〜R7下期の22年分集計（出典: 電験王）。分野の内訳は[分野別一覧](kakomon/by-field.md)を参照。
 
 ---
 
