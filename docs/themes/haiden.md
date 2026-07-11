@@ -22,7 +22,7 @@ related_themes: [架空送電線路, 変圧器]
 
 ```mermaid
 graph LR
-    A[一次変電所<br/>66/154 kV → 6.6 kV] --> B[配電用変電所<br/>6.6 kV母線]
+    A[配電用変電所<br/>66/154 kV → 6.6 kV] --> B[6.6 kV母線]
     B --> C[高圧配電線<br/>6.6 kV 架空/地中]
     C --> D1[PAS / LBS<br/>区分開閉器]
     D1 --> E[柱上変圧器<br/>6.6 kV → 100/200 V]
