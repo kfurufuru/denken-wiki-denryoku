@@ -1,7 +1,6 @@
 ---
 tags: [静電気, コンデンサ, 誘電体, 計算]
 difficulty: ★★★
-version: v1.0
 related_themes: [電気材料]
 ---
 

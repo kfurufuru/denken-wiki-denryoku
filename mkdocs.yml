@@ -33,6 +33,13 @@ theme:
     - content.code.copy
     - announce.dismiss
 
+validation:
+  omitted_files: warn
+  links:
+    not_found: warn
+    anchors: warn
+    unrecognized_links: warn
+
 plugins:
   - search:
       lang: ja
@@ -88,10 +95,10 @@ nav:
       - themes/henden/index.md
       - 変圧器（基礎ハブ）: themes/henatsuki.md
       - 変圧器損失・効率（深掘り）: themes/henatsuki-loss.md
-      - 計器用変成器（VT・CT）: themes/keiki-hensei.md
+      - 開閉装置・保護継電器（ハブ）: themes/kaihei-hogo.md
       - 遮断器・断路器（CB・DS）: themes/shadanki.md
       - 保護継電器: themes/hogo-keiden.md
-      - 開閉装置・保護継電器（hub）: themes/kaihei-hogo.md
+      - 計器用変成器（VT・CT）: themes/keiki-hensei.md
     - 送電:
       - themes/souden/index.md
       - 架空送電線路: themes/kakuu-souden.md
@@ -104,12 +111,12 @@ nav:
       - themes/sonota/index.md
       - 電気材料: themes/denki-zairyou.md
       - 電力系統・需給運用: themes/denryoku-keitou.md
-      - コンデンサの電界と電位差（誘電体挿入）: themes/condenser-seidenki.md
+      - 【発展・理論】コンデンサの電界と電位差: themes/condenser-seidenki.md
   - 過去問マッピング:
     - kakomon/index.md
     - 年度別一覧: kakomon/by-year.md
     - 分野別一覧: kakomon/by-field.md
-    - 出題波予測（周期性分析）: kakomon/wave-analysis.md
+    - 出題実績マトリクス（周期性データ）: kakomon/wave-analysis.md
   - 攻略戦略:
     - strategy/index.md
     - 試験直前3日チェックリスト: strategy/last-3days-checklist.md
@@ -120,5 +127,5 @@ nav:
     - 頻出計算パターン集: reference/calc-patterns.md
     - 頻出数値暗記シート: reference/numbers.md
     - 用語集: reference/glossary.md
-    - 絵文字マーカー凡例: reference/emoji-legend.md
-    - バージョニング基準: reference/versioning.md
+    - 標準セクション構成ガイド: reference/emoji-legend.md
+    - タグ一覧: tags.md

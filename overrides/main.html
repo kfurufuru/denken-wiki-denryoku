@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block announce %}
-  {#- ページ単位の移行状態バッジ。src_uri を新SPAのアンカーへ写像し、移行済みページだけ「✓ このページは移行済み」＋該当ページへのdeep linkを出す。未収録ページ（versioning 等）は移行済みと言わず旧版のみと明示する。 -#}
+  {#- ページ単位の併存バッジ。src_uri を新SPA（併存運用中）のアンカーへ写像し、SPA収録ページには該当ページへのdeep linkを出す。未収録ページはこのWikiのみに存在すると明示する。 -#}
   {% set src = page.file.src_uri if page and page.file else "" %}
   {% set migrated = {
       "index.md": "home",
@@ -45,7 +45,7 @@
   {% set spa = "https://kfurufuru.github.io/secretary-portal-public/denken3-denryoku-wiki.html" %}
   <div style="display:flex; gap:10px; align-items:center; justify-content:center; flex-wrap:wrap; padding:5px 0 3px; border-bottom:1px solid rgba(255,255,255,0.18); margin-bottom:4px;">
     {% if anchor %}
-      <span style="font-weight:700; color:#fff; font-size:0.86rem;">✓ このページは新Wikiへ移行済みです</span>
+      <span style="font-weight:700; color:#fff; font-size:0.86rem;">✓ このページは新Wiki（SPA版）にも収録されています</span>
       <a href="{{ spa }}#{{ anchor }}"
          style="font-weight:700; color:#fff; text-decoration:none; background:rgba(255,255,255,0.24); border:1px solid rgba(255,255,255,0.55); border-radius:4px; padding:2px 12px; font-size:0.86rem;"
          onmouseover="this.style.background='rgba(255,255,255,0.38)'" onmouseout="this.style.background='rgba(255,255,255,0.24)'">
@@ -53,8 +53,8 @@
       </a>
       <span style="font-size:0.76rem; color:rgba(255,255,255,0.65);">（このページも引き続き閲覧できます）</span>
     {% else %}
-      <span style="font-weight:700; color:#fff; font-size:0.86rem;">この電力Wikiは新Wikiへ移行しました</span>
-      <span style="font-size:0.76rem; color:rgba(255,255,255,0.72);">※このページは旧版のみ（新Wiki未収録・引き続き閲覧できます）</span>
+      <span style="font-weight:700; color:#fff; font-size:0.86rem;">この電力Wikiは新Wiki（SPA版）と併存運用中です</span>
+      <span style="font-size:0.76rem; color:rgba(255,255,255,0.72);">※このページは本Wikiのみに収録（新Wiki未収録）</span>
       <a href="{{ spa }}"
          style="font-weight:700; color:#fff; text-decoration:none; background:rgba(255,255,255,0.24); border:1px solid rgba(255,255,255,0.55); border-radius:4px; padding:2px 12px; font-size:0.86rem;"
          onmouseover="this.style.background='rgba(255,255,255,0.38)'" onmouseout="this.style.background='rgba(255,255,255,0.24)'">
